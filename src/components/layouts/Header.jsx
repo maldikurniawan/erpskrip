@@ -8,7 +8,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { BsCreditCard } from "react-icons/bs";
-import { FaBars } from "react-icons/fa";
+import { FaArrowRight, FaBars } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
 import { TbChevronDown } from "react-icons/tb";
 
@@ -72,16 +72,18 @@ const Header = () => {
 	return (
 		<>
 			<header
-				className={`px-10 md:px-28 h-16 sm:h-20 flex items-center justify-between w-full fixed top-0 z-40 transition-all duration-300 py-4 ${
-					scrolled ? "bg-[#1791F4]/50 backdrop-blur shadow" : "bg-transparent"
-				}`}
+				className={`px-10 md:px-28 h-16 sm:h-20 flex items-center justify-between w-full fixed top-0 z-40 transition-all duration-300 py-4 ${scrolled ? "bg-[#111827] backdrop-blur shadow" : "bg-transparent"
+					}`}
 			>
-				<img
+				{/* <img
 					onClick={() => router.push("/")}
 					src="/assets/Logo-Qiupay.png"
 					alt="logo"
 					className="h-full cursor-pointer"
-				/>
+				/> */}
+				<div className="font-bold text-xl md:text-3xl text-white">
+					ERPSkrip
+				</div>
 
 				<div className="hidden lg:flex items-center gap-x-2">
 					{menu.map((item, itemIdx) =>
@@ -134,13 +136,25 @@ const Header = () => {
 					)}
 				</div>
 
-				<Link
-					href="#"
-                    prefetch={false}
-					className="hidden lg:block px-12 py-1 text-white border border-white rounded-full"
-				>
-					Sign In
-				</Link>
+				<div className="flex">
+					<Link
+						href="#"
+						prefetch={false}
+						className="hidden px-4 py-2 lg:block text-white"
+					>
+						Sign In
+					</Link>
+					<Link
+						href="#"
+						prefetch={false}
+						className="hidden border border-white rounded-lg py-2 px-2 lg:block text-white"
+					>
+						<div className="flex">
+							Ajukan Demo <FaArrowRight className="mt-1 ml-2" />
+						</div>
+						
+					</Link>
+				</div>
 
 				<button
 					onClick={() => setNavOpen(true)}
