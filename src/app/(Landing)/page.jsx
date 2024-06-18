@@ -5,6 +5,7 @@ import Keuntungan from "./Keuntungan";
 import Peta from "./Peta";
 import Review from "./Review";
 import FAQ from "./FAQ";
+import Banner from "./Banner";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Peta />
       <Review />
       <FAQ />
+      <Banner />
     </main>
   );
 }

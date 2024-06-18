@@ -23,7 +23,8 @@ const Footer = () => {
 						<div className="font-medium mb-1">List Pengguna</div>
 					</div>
 					<div>
-						<div className="font-bold text-[#0C375A] mb-4">F&Q</div>
+						<div className="font-bold text-[#0C375A] mb-4">Keamanan Privasi</div>
+						<div className="font-medium mb-1">F&Q</div>
 						<div className="font-medium mb-1">Kebijakan Privasi</div>
 						<div className="font-medium mb-1">Copyright</div>
 					</div>
@@ -37,7 +38,7 @@ const Footer = () => {
 			</div>
 			<div className="py-5 text-xs md:text-sm justify-between w-full font-semibold flex border-t-[3px] border-[#D9D9D9]">
 				<div>
-					© 2024. ERPSkrip. All rights reserved
+					© 2024 ERPSkrip. All rights reserved
 				</div>
 				<div className="flex gap-4">
 					<FaYoutube size={26} />

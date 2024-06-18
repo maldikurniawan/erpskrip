@@ -48,7 +48,7 @@ const Header = () => {
 		},
 		{
 			title: "Kontak Kami",
-			link: "/kontakkami",
+			link: "/kontak",
 			menu: [],
 		},
 	]);
@@ -138,21 +138,20 @@ const Header = () => {
 
 				<div className="flex">
 					<Link
-						href="#"
+						href="/login"
 						prefetch={false}
 						className="hidden px-4 py-2 lg:block text-white"
 					>
 						Sign In
 					</Link>
 					<Link
-						href="#"
+						href="/ajukan"
 						prefetch={false}
 						className="hidden border border-white rounded-lg py-2 px-2 lg:block text-white"
 					>
 						<div className="flex">
 							Ajukan Demo <FaArrowRight className="mt-1 ml-2" />
 						</div>
-						
 					</Link>
 				</div>
 
@@ -169,10 +168,13 @@ const Header = () => {
 					right: navOpen ? "0" : `-300px`,
 					bottom: "0",
 				}}
-				className="fixed z-50 top-0 h-screen min-[300px]:w-[300px] bg-[#1791F4]/50 backdrop-blur drop-shadow transition-[right,top] duration-500"
+				className="fixed z-50 top-0 h-screen min-[300px]:w-[300px] bg-[#111827]/50 backdrop-blur drop-shadow transition-[right,top] duration-500"
 			>
 				<div className="flex items-center justify-between text-white p-4">
-					<img src="/assets/Logo-Qiupay.png" alt="logo" className="h-10" />
+					{/* <img src="/assets/Logo-Qiupay.png" alt="logo" className="h-10" /> */}
+					<div className="font-bold text-xl md:text-3xl text-white">
+						ERPSkrip
+					</div>
 					<FaXmark
 						className="cursor-pointer"
 						onClick={() => {
