@@ -4,7 +4,7 @@ import { BsChevronRight } from 'react-icons/bs'
 const page = () => {
     return (
         <div className='grid grid-cols-1 sm:grid-cols-2 h-screen w-full'>
-            <div className='hidden sm:block'>
+            <div className='sm:block'>
                 <img className='w-full h-full object-cover' src="/assets/login.jpg" alt="" />
             </div>
 
