@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
+import Link from "next/link";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
@@ -11,28 +12,36 @@ const Footer = () => {
 						Logo
 					</div>
 					<div className="text-justify py-5 border-t-[3px] border-[#D9D9D9]">
-					ERP Skrip adalah salah satu produk dari Gaha Skrip Infra Prima,yang dimana menyediakan solusi perangkat lunak Enterprise Resource Planning (ERP) yang berfokus pada membantu bisnis mengelola dan mengintegrasikan berbagai aspek operasional Kususnya untuk Perusahaan Internet Service Provider (ISP). ERP Skrip menawarkan perangkat lunak yang memungkinkan perusahaan untuk mengotomatisasi dan merampingkan proses bisnis mereka, termasuk manajemen keuangan, inventaris, produksi, penjualan, sumber daya manusia, dan lain-lain.
+						ERP Skrip adalah salah satu produk dari Gaha Skrip Infra Prima, yang dimana menyediakan solusi perangkat lunak Enterprise Resource Planning (ERP) yang berfokus pada membantu bisnis mengelola dan mengintegrasikan berbagai aspek operasional Kususnya untuk Perusahaan Internet Service Provider (ISP). ERP Skrip menawarkan perangkat lunak yang memungkinkan perusahaan untuk mengotomatisasi dan merampingkan proses bisnis mereka, termasuk manajemen keuangan, inventaris, produksi, penjualan, sumber daya manusia, dan lain-lain.
 					</div>
 				</div>
 				<div className="flex flex-wrap gap-x-16 gap-y-6">
 					<div>
 						<div className="font-bold text-[#0C375A] mb-4">Tentang Kami</div>
-						<div className="font-medium mb-1">Perusahaan Kami</div>
-						<div className="font-medium mb-1">Hubungi Kami</div>
-						<div className="font-medium mb-1">Karir</div>
-						<div className="font-medium mb-1">List Pengguna</div>
+						<div className="font-medium mb-4">Perusahaan Kami</div>
+						<div className="mb-4">
+							<Link href={'/kontak'} className="font-medium">Hubungi Kami</Link>
+						</div>
+						<div className="font-medium mb-4">Karir</div>
+						<div className="mb-4">
+							<Link href={'/pengguna'} className="font-medium">List Pengguna</Link>
+						</div>
 					</div>
 					<div>
 						<div className="font-bold text-[#0C375A] mb-4">Keamanan Privasi</div>
-						<div className="font-medium mb-1">F&Q</div>
-						<div className="font-medium mb-1">Kebijakan Privasi</div>
-						<div className="font-medium mb-1">Copyright</div>
+						<div className="mb-4">
+							<Link href={'/faq'} className="font-medium">F&Q</Link>
+						</div>
+						<div className="mb-4">
+							<Link href={'/privasi'} className="font-medium">Kebijakan Privasi</Link>
+						</div>
+						<div className="font-medium mb-4">Copyright</div>
 					</div>
 					<div>
 						<div className="font-bold text-[#0C375A] mb-4">Menu</div>
-						<div className="font-medium mb-1">Beranda</div>
-						<div className="font-medium mb-1">Fitur - Fitur</div>
-						<div className="font-medium mb-1">Harga</div>
+						<div className="font-medium mb-4">Beranda</div>
+						<div className="font-medium mb-4">Fitur - Fitur</div>
+						<div className="font-medium mb-4">Harga</div>
 					</div>
 				</div>
 			</div>

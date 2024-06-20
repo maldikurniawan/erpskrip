@@ -16,14 +16,14 @@ const page = () => {
                     <div className="text-gray-400 text-base md:text-lg mb-4">
                         Jelajahi Fitur - Fitur Canggih ERP untuk Meningkatkan Efisiensi Perusahaan ISP Anda
                     </div>
-                    <div className="flex items-center gap-2 p-3 text-white font-bold">
-                        <PiBuildingOffice />Jalan Alam Gaya N0. 42, Way Halim, Bandar Lampung, Lampung
+                    <div className="flex items-center gap-2 pr-3 py-3 text-white font-bold">
+                        <PiBuildingOffice className='h-6 w-6' />Jalan Alam Gaya N0. 42, Way Halim, Bandar Lampung, Lampung
                     </div>
-                    <div className="flex items-center gap-2 p-3 text-white font-bold">
-                        <CiMail />gerryarisman96@gmail.com
+                    <div className="flex items-center gap-2 pr-3 py-3 text-white font-bold">
+                        <CiMail className='h-6 w-6' />gerryarisman96@gmail.com
                     </div>
-                    <div className="flex items-center gap-2 p-3 text-white font-bold">
-                        <IoPhonePortraitOutline /> +62 21 7987 8923
+                    <div className="flex items-center gap-2 pr-3 py-3 text-white font-bold">
+                        <IoPhonePortraitOutline className='h-6 w-6' /> +62 21 7987 8923
                     </div>
                 </div>
                 <div className="w-full flex-1 flex items-center justify-center xl:justify-end relative z-10">

@@ -32,13 +32,13 @@ const HeaderV2 = () => {
 				{
 					title: "Fitur 1",
 					description: "Lorem ipsum dolor, sit amet consectetur",
-					link: "/fitur",
+					link: "",
 				},
-				{
-					title: "Fitur 2",
-					description: "Lorem ipsum dolor, sit amet consectetur",
-					link: "/fitur",
-				},
+				// {
+				// 	title: "Fitur 2",
+				// 	description: "Lorem ipsum dolor, sit amet consectetur",
+				// 	link: "",
+				// },
 			],
 		},
 		{
@@ -91,23 +91,58 @@ const HeaderV2 = () => {
 									>
 										<PopoverPanel className="absolute z-10 mt-6 w-max grid gap-2 bg-white shadow p-3 rounded-lg overflow-hidden">
 											{item.menu.map((menuItem, menuItemIdx) => (
-												<Link
-													className="rounded-md hover:bg-gray-50 font-medium whitespace-nowrap p-2 flex items-center gap-4"
-													key={menuItemIdx}
-													href={menuItem.link}
-												>
-													<div className="flex h-10 w-10 shrink-0 items-center justify-center bg-[#1791F450] rounded-lg text-white sm:h-12 sm:w-12">
-														<BsCreditCard className="w-6 h-6" color="#1791F4" />
+												// <Link
+												// 	className="rounded-md hover:bg-gray-50 font-medium whitespace-nowrap p-2 flex items-center gap-4"
+												// 	key={menuItemIdx}
+												// 	href={menuItem.link}
+												// >
+												// 	<div className="flex h-10 w-10 shrink-0 items-center justify-center bg-[#1791F450] rounded-lg text-white sm:h-12 sm:w-12">
+												// 		<BsCreditCard className="w-6 h-6" color="#1791F4" />
+												// 	</div>
+												// 	<div className="w-80">
+												// 		<p className="text-sm text-gray-900 font-medium">
+												// 			{menuItem.title}
+												// 		</p>
+												// 		<p className="text-xs text-gray-500 w-full">
+												// 			{menuItem.description}
+												// 		</p>
+												// 	</div>
+												// </Link>
+												<div className="flex flex-wrap gap-x-16 gap-y-6">
+													<div>
+														<div className="font-bold text-gray-900 mb-4">Teknis</div>
+														<div className="mb-4">
+															<Link href={'/config-olt'} className="font-medium text-gray-400">Konfigurasi OLT</Link>
+														</div>
+														<div className="font-medium text-gray-400 mb-4">Konfigurasi Router</div>
+														<div className="font-medium text-gray-400 mb-4">Infrastruktur FTTX</div>
+														<div className="font-medium text-gray-400 mb-4">Audit OLT</div>
 													</div>
-													<div className="w-80">
-														<p className="text-sm text-gray-900 font-medium">
-															{menuItem.title}
-														</p>
-														<p className="text-xs text-gray-500 w-full">
-															{menuItem.description}
-														</p>
+													<div>
+														<div className="font-bold text-gray-900 mb-4">Marketing</div>
+														<div className="font-medium text-gray-400 mb-4">Capaian</div>
+														<div className="font-medium text-gray-400 mb-4">Registrasi Pelanggan</div>
+														<div className="font-medium text-gray-400 mb-4">Data Pelanggan</div>
 													</div>
-												</Link>
+													<div>
+														<div className="font-bold text-gray-900 mb-4">Keuangan</div>
+														<div className="font-medium text-gray-400 mb-4">Kas Bank</div>
+														<div className="font-medium text-gray-400 mb-4">Akuntansi</div>
+														<div className="font-medium text-gray-400 mb-4">Arta Kelola</div>
+														<div className="font-medium text-gray-400 mb-4">Anggaran Belanja</div>
+														<div className="font-medium text-gray-400 mb-4">Monitoring</div>
+													</div>
+													<div>
+														<div className="font-bold text-gray-900 mb-4">Umum</div>
+														<div className="font-medium text-gray-400 mb-4">Dashboard</div>
+														<div className="font-medium text-gray-400 mb-4">Notifikasi</div>
+														<div className="font-medium text-gray-400 mb-4">Reminder</div>
+														<div className="font-medium text-gray-400 mb-4">Inventory</div>
+														<div className="font-medium text-gray-400 mb-4">Tiket Gangguan</div>
+														<div className="font-medium text-gray-400 mb-4">Request</div>
+														<div className="font-medium text-gray-400 mb-4">WhatsApp Blast</div>
+													</div>
+												</div>
 											))}
 										</PopoverPanel>
 									</Transition>

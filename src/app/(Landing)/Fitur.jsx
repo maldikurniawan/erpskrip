@@ -4,28 +4,28 @@ import React, { useState } from 'react';
 const Fitur = () => {
     const [fitur] = useState([
         {
-            title: "Lorem Ipsum",
+            title: "Teknis",
             description:
-                "Lorem ipsum dolor sit amet consectetur. Vulputate integer pellentesque aliquam ipsum.",
-            icon: "/assets/fitur-1.png",
+                "Konfigurasi OLT, Pengaturan Router, Audit Infrastruktur, dan Manajemen FTTX untuk mengoptimalkan ISP anda.",
+            icon: "/assets/keuntungan-3.png",
         },
         {
-            title: "Lorem Ipsum",
+            title: "Umum",
             description:
-                "Lorem ipsum dolor sit amet consectetur. Vulputate integer pellentesque aliquam ipsum.",
-            icon: "/assets/fitur-2.png",
+                "Akses cepat ke semua pengaturan dasar dan informasi penting Perusahaan ISP Anda.",
+            icon: "/assets/keuntungan-3.png",
         },
         {
-            title: "Lorem Ipsum",
+            title: "Marketing",
             description:
-                "Lorem ipsum dolor sit amet consectetur. Vulputate integer pellentesque aliquam ipsum.",
-            icon: "/assets/fitur-3.png",
+                "Analisis Pencapaian Penjualan, Registrasi Pelanggan, dan Data Pelanggan untuk meningkatkan bisnis Anda.",
+            icon: "/assets/keuntungan-3.png",
         },
         {
-            title: "Lorem Ipsum",
+            title: "Keuangan",
             description:
-                "Lorem ipsum dolor sit amet consectetur. Vulputate integer pellentesque aliquam ipsum.",
-            icon: "/assets/fitur-3.png",
+                "Laporan Keuangan, Penganggaran, dan Pemantauan Arus Kas dalam satu menu terintegrasi.",
+            icon: "/assets/keuntungan-3.png",
         },
     ]);
 
@@ -35,19 +35,27 @@ const Fitur = () => {
                 <div className="text-center text-2xl md:text-3xl text-black font-bold mb-2">
                     Fitur - Fitur <span className="text-[#111827]">ERPSkrip</span>
                 </div>
-                <div className="text-[#A1A1A1] text-center text-base md:text-lg">
-                    Lorem ipsum dolor sit amet consectetur. Convallis dis quam
+                <div className="text-gray-600 text-center text-base md:text-lg">
+                    Jelajahi Fitur - Fitur Canggih ERP untuk Meningkatkan Efisiensi <br />
+                    Perusahaan ISP Anda
                 </div>
             </div>
-            <div className="flex flex-wrap gap-8 justify-center">
+            <div className="flex flex-wrap gap-2 justify-center">
                 {fitur.map((item, itemIdx) => (
                     <div
                         key={itemIdx}
-                        className="w-64 flex flex-col items-center justify-center"
+                        className="w-64 flex flex-col items-center justify-center bg-blue-50 rounded-md"
                     >
-                        <div className="rounded-2xl overflow-hidden max-w-sm text-sm bg-blue-100 text-black shadow-lg">
-                            <div className="p-4 font-bold">{item.title}</div>
-                            <div className="p-4">{item.description}</div>
+                        <div className="rounded-md overflow-hidden max-w-sm p-2 text-sm text-black">
+                            <img
+                                src={item.icon}
+                                alt="pengguna"
+                                className="h-full w-full object-contain p-2"
+                            />
+                        </div>
+                        <div>
+                            <div className="px-4 pt-4 font-bold">{item.title}</div>
+                            <div className="px-4 pb-4 pt-2">{item.description}</div>
                         </div>
                     </div>
                 ))}

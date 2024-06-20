@@ -1,4 +1,5 @@
 import React from 'react'
+import { BsChevronRight } from 'react-icons/bs'
 
 const page = () => {
     return (
@@ -9,20 +10,29 @@ const page = () => {
 
             <div className='bg-white flex flex-col justify-center'>
                 <form className='max-w-[400px] w-full mx-auto rounded-lg bg-white p-8 px-8'>
-                    <h2 className='text-4xl dark:text-white font-bold text-center'>Masuk</h2>
-                    <div className='flex flex-col text-gray-400 py-2'>
-                        <label>Username</label>
-                        <input className='rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none' type="text" />
+                    <div className='text-4xl dark:text-white font-bold'>Masuk</div>
+                    <div className='text-sm text-gray-400 font-bold mt-3 mb-6'>Mohon isi data di bawah ini</div>
+                    <div className="w-full max-w-lg">
+                        <div className="flex flex-wrap -mx-3">
+                            <div className="relative w-full px-3 mb-3">
+                                <div className="absolute inset-y-0 ml-2 start-0 flex items-center ps-3.5 pointer-events-none">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                                    </svg>
+                                </div>
+                                <input type="text" className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500' placeholder='Masukan Email' required />
+                            </div>
+                            <div className="relative w-full px-3">
+                                <div className="absolute inset-y-0 ml-2 start-0 flex items-center ps-3.5 pointer-events-none">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 0 1 3 3m3 0a6 6 0 0 1-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1 1 21.75 8.25Z" />
+                                    </svg>
+                                </div>
+                                <input type="text" className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500' placeholder='Masukan Password' required />
+                            </div>
+                        </div>
                     </div>
-                    <div className='flex flex-col text-gray-400 py-2'>
-                        <label>Password</label>
-                        <input className='p-2 rounded-lg bg-gray-700 mt-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none' type="password" />
-                    </div>
-                    <div className='flex justify-between text-gray-400 py-2'>
-                        <p className='flex items-center'><input className='mr-2' type="checkbox" /> Remember Me</p>
-                        <p>Forgot Password</p>
-                    </div>
-                    <button className='w-full my-5 py-2 bg-teal-500 shadow-lg shadow-teal-500/50 hover:shadow-teal-500/40 text-white font-semibold rounded-lg'>Masuk</button>
+                    <button className='flex items-center gap-2 my-5 py-3 px-10 bg-gray-900 shadow-lg text-white font-semibold rounded-lg'>Masuk <BsChevronRight /></button>
 
                 </form>
             </div>
