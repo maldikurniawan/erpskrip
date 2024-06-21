@@ -9,38 +9,46 @@ const FAQ = () => {
     {
       title: "Apa Itu ERPSkrip ?",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nostrum praesentium neque cum, dicta suscipit sint. Enim dolor repellendus nisi qui cumque quibusdam voluptatem, vero iure esse similique quia vitae.",
+        "ERP Skrip adalah salah satu produk dari Gaha Skrip Infra Prima, yang dimana menyediakan solusi perangkat lunak Enterprise Resource Planning (ERP) yang berfokus pada membantu bisnis mengelola dan mengintegrasikan berbagai aspek operasional Kususnya untuk Perusahaan Internet Service Provider (ISP). ERP Skrip menawarkan perangkat lunak yang memungkinkan perusahaan untuk mengotomatisasi dan merampingkan proses bisnis mereka, termasuk manajemen keuangan, inventaris, produksi, penjualan, sumber daya manusia, dan lain-lain.",
       open: false,
     },
     {
       title: "Bagaimana Sistem Generate Invoice Suspend dan Isolir ?",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nostrum praesentium neque cum, dicta suscipit sint. Enim dolor repellendus nisi qui cumque quibusdam voluptatem, vero iure esse similique quia vitae.",
+        "Tagihan Pelanggan, Suspend ,dan Isolir Akan otomatis di buat sesuai kesepakatan dengan client menggunakan Whatsapp Blasting.",
       open: false,
     },
     {
       title: "Ada Berapa Support Payment di ERPSkrip ?",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nostrum praesentium neque cum, dicta suscipit sint. Enim dolor repellendus nisi qui cumque quibusdam voluptatem, vero iure esse similique quia vitae.",
+        "Ada 2 pilihan tipe pembayaran yakni Pacabayar (Bayar di Akhir) dan Prabayar (Bayar Di Awal). ",
       open: false,
     },
     {
       title: "Payment Gateway apa yang digunakan ERPSkrip ?",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nostrum praesentium neque cum, dicta suscipit sint. Enim dolor repellendus nisi qui cumque quibusdam voluptatem, vero iure esse similique quia vitae.",
+        "Kami menggunakan Payment Gateway yang kami miliki sendiri yaitu Qiupay sehingga lebih mudah dan aman untuk melakukan transaksi tanpa ada kesulitan.",
       open: false,
     },
     {
       title: "Apakah ERPSkrip memiliki Fitur WhatsApp menggunakan Nomor Client ?",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nostrum praesentium neque cum, dicta suscipit sint. Enim dolor repellendus nisi qui cumque quibusdam voluptatem, vero iure esse similique quia vitae.",
+        "Kami telah menyediakan Scan QR Code di halaman akun Anda untuk menggunakan nomor WhatsApp pribadi Anda.",
       open: false,
     },
   ]);
 
   return (
-    <div className="relative overflow-hidden min-h-screen bg-gray-200 px-10 md:px-28 transition-all duration-300 pt-[150px] pb-20 flex flex-wrap gap-x-10 gap-y-8 justify-between">
-      <div className="w-full xl:flex-1">
+    <div className="relative overflow-hidden min-h-screen bg-gray-200 px-10 md:px-28 transition-all duration-300 pt-[100px] pb-16 flex flex-wrap gap-x-10 gap-y-8 justify-between">
+      <div className="mb-12 overflow-hidden w-full">
+        <div className="text-center text-3xl md:text-5xl text-black font-bold mb-2">
+          Frequently Asked Questions
+        </div>
+        <div className="text-gray-600 text-center text-base md:text-lg">
+          Temukan Jawaban Anda di sini
+        </div>
+      </div>
+      <div className="w-full xl:flex-1 z-20 mb-10">
         {faq.map((item, itemIdx) => (
           <div className="mb-2" key={itemIdx}>
             <div
@@ -52,7 +60,7 @@ const FAQ = () => {
                 newFaq[itemIdx].open = f;
                 setFaq(newFaq);
               }}
-              className="bg-[#DEF3FF] p-5 flex justify-between items-center rounded font-semibold cursor-pointer gap-x-4"
+              className="bg-white p-5 flex justify-between items-center rounded-lg shadow-lg font-semibold cursor-pointer gap-x-4"
             >
               <div>{item.title}</div>
               <div>{item.open ? <TbMinus /> : <TbPlus />}</div>
@@ -68,8 +76,14 @@ const FAQ = () => {
           </div>
         ))}
       </div>
-      <div className="w-full xl:flex-1">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, quia recusandae alias sapiente at dolorum natus molestiae assumenda commodi praesentium ducimus dignissimos porro dolore hic fugiat nemo. A, quod! Modi.
+      <div className="w-full xl:flex-1 flex items-center justify-center">
+        <div className="relative z-0 bottom-20 w-60 mt-8">
+          <img
+            src="/assets/phone.png"
+            alt="hero"
+            className="h-full w-full"
+          />
+        </div>
       </div>
     </div>
   )

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import { FaArrowRight } from 'react-icons/fa'
 
@@ -15,9 +16,11 @@ const Banner = () => {
                     Kesuksesan bisnis Anda dimulai dengan langkah kecil. Ayo, <br />
                     jelajahi kemudahan dan keunggulan ERPSkrip hari ini!
                 </div>
-                <button className="flex items-center gap-2 p-3 border border-white rounded-md font-bold">
-                    Ajukan Demo Sekarang<FaArrowRight />
-                </button>
+                <Link href={'/ajukan'} prefetch={false}>
+                    <div className="flex items-center gap-2 p-3 border border-white rounded-md font-bold">
+                        Ajukan Demo Sekarang<FaArrowRight />
+                    </div>
+                </Link>
             </div>
         </div>
     )

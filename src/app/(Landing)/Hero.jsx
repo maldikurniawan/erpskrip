@@ -23,9 +23,9 @@ const Hero = () => {
 				</button>
 			</div>
 			<div className="w-full flex-1 flex items-center justify-center xl:justify-end relative z-10">
-				<div className="w-56">
+				<div className="w-full">
 					<img
-						src="/assets/hero-image.png"
+						src="/assets/hero-erp.png"
 						alt="hero"
 						className="h-full w-full"
 					/>

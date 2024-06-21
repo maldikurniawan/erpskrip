@@ -52,7 +52,7 @@ const Review = () => {
   return (
     <div className="relative overflow-hidden min-h-screen bg-[#F7F7F7] px-10 md:px-28 transition-all duration-300 pt-[100px] pb-20">
       <div className="mb-12 text-center md:text-left">
-        <div className="text-2xl md:text-3xl text-black font-bold mb-1 text-center">
+        <div className="text-3xl md:text-5xl text-black font-bold mb-1 text-center">
           Semua ISP Mencintai <span className="text-[#111827]">ERPSkrip</span> 
         </div>
         <div className="text-[#A1A1A1] text-base md:text-lg text-center">

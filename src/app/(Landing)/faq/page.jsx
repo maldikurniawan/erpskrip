@@ -10,31 +10,31 @@ const page = () => {
     {
       title: "Apa Itu ERPSkrip ?",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nostrum praesentium neque cum, dicta suscipit sint. Enim dolor repellendus nisi qui cumque quibusdam voluptatem, vero iure esse similique quia vitae.",
+        "ERP Skrip adalah salah satu produk dari Gaha Skrip Infra Prima, yang dimana menyediakan solusi perangkat lunak Enterprise Resource Planning (ERP) yang berfokus pada membantu bisnis mengelola dan mengintegrasikan berbagai aspek operasional Kususnya untuk Perusahaan Internet Service Provider (ISP). ERP Skrip menawarkan perangkat lunak yang memungkinkan perusahaan untuk mengotomatisasi dan merampingkan proses bisnis mereka, termasuk manajemen keuangan, inventaris, produksi, penjualan, sumber daya manusia, dan lain-lain.",
       open: false,
     },
     {
       title: "Bagaimana Sistem Generate Invoice Suspend dan Isolir ?",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nostrum praesentium neque cum, dicta suscipit sint. Enim dolor repellendus nisi qui cumque quibusdam voluptatem, vero iure esse similique quia vitae.",
+        "Tagihan Pelanggan, Suspend ,dan Isolir Akan otomatis di buat sesuai kesepakatan dengan client menggunakan Whatsapp Blasting.",
       open: false,
     },
     {
       title: "Ada Berapa Support Payment di ERPSkrip ?",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nostrum praesentium neque cum, dicta suscipit sint. Enim dolor repellendus nisi qui cumque quibusdam voluptatem, vero iure esse similique quia vitae.",
+        "Ada 2 pilihan tipe pembayaran yakni Pacabayar (Bayar di Akhir) dan Prabayar (Bayar Di Awal).",
       open: false,
     },
     {
       title: "Payment Gateway apa yang digunakan ERPSkrip ?",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nostrum praesentium neque cum, dicta suscipit sint. Enim dolor repellendus nisi qui cumque quibusdam voluptatem, vero iure esse similique quia vitae.",
+        "Kami menggunakan Payment Gateway yang kami miliki sendiri yaitu Qiupay sehingga lebih mudah dan aman untuk melakukan transaksi tanpa ada kesulitan.",
       open: false,
     },
     {
       title: "Apakah ERPSkrip memiliki Fitur WhatsApp menggunakan Nomor Client ?",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nostrum praesentium neque cum, dicta suscipit sint. Enim dolor repellendus nisi qui cumque quibusdam voluptatem, vero iure esse similique quia vitae.",
+        "Kami telah menyediakan Scan QR Code di halaman akun Anda untuk menggunakan nomor WhatsApp pribadi Anda.",
       open: false,
     },
   ]);
