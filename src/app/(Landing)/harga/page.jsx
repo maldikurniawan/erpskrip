@@ -9,19 +9,18 @@ const page = () => {
             <div className="relative overflow-hidden min-h-screen bg-[#F7F7F7] px-10 md:px-28 transition-all duration-300 pt-[120px] pb-20">
                 <div className='font-bold text-4xl mb-8 text-center'>Harga Spesial</div>
                 <div className="mb-3">
-                    <div className="rounded-2xl overflow-hidden w-full text-sm bg-gradient-to-br from-[#4B5563] to-[#111827] shadow p-8 flex flex-wrap gap-4">
+                    <div className="rounded-2xl overflow-hidden w-full text-sm bg-gradient-to-br from-[#4B5563] to-[#111827] shadow flex flex-wrap">
                         <div className="relative md:flex-1 w-full md:w-fit">
-                            <div className="absolute -rotate-3 bg-[#54C9EF] w-full h-full rounded-lg"></div>
-                            <div className="relative z-10 bg-white w-full h-full rounded-lg overflow-hidden">
+                            <div className="relative z-10 bg-white w-full h-full rounded-lg overflow-hidden mix-blend-multiply">
                                 <img
-                                    src="/assets/blog1.png"
+                                    src="/assets/hand-shake.jpeg"
                                     alt="blog"
                                     className="w-full h-full object-cover"
                                 />
                             </div>
                         </div>
 
-                        <div className="md:flex-1 flex flex-col justify-between w-full md:w-fit text-white">
+                        <div className="md:flex-1 flex flex-col justify-between w-full md:w-fit text-white p-8">
                             <div>
                                 <div className="mb-2">
                                     <div className="font-bold text-base">Dengan Rp 5.000/Transaksi</div>

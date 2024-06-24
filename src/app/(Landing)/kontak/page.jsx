@@ -27,12 +27,12 @@ const page = () => {
                     </div>
                 </div>
                 <div className="w-full flex-1 flex items-center justify-center xl:justify-end relative z-10">
-                    <div className="w-56">
-                        {/* <img
-						src="/assets/people-3.png"
+                    <div className="w-96">
+                        <img
+						src="/assets/business-man.png"
 						alt="hero"
 						className="h-full w-full"
-					/> */}
+					/>
                     </div>
                 </div>
 

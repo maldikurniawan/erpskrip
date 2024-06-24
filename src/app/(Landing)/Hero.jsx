@@ -11,7 +11,7 @@ const Hero = () => {
 				</div>
 				<div className="text-white text-base md:text-lg mb-4">
 					Tingkatkan efisiensi operasional bisnis anda dengan
-					ERPSkrip. Solusi inovativ kami mengintegrasikan semua
+					ERPSkrip. Solusi inovatif kami mengintegrasikan semua
 					aspek manajemen Perusahaan ISP anda dalam satu
 					platform yang mudah digunakan.
 				</div>

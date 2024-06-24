@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import Image from "next/image";
 import Link from "next/link";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa";
 
@@ -8,8 +7,13 @@ const Footer = () => {
 		<div className="px-10 md:px-28 transition-all duration-300 pt-16 text-[#A1A1A1]">
 			<div className="mb-10 flex flex-wrap gap-x-24 gap-y-10">
 				<div className="md:w-5/12">
-					<div className="h-auto mb-4 text-5xl text-black font-bold">
-						Logo
+					<div className="h-auto mb-4 gap-4 flex items-center text-5xl text-black font-bold">
+						<img
+							src="/assets/logo-erp.png"
+							alt="logo"
+							className="h-full w-12 cursor-pointer"
+						/>
+						ERPSkrip
 					</div>
 					<div className="text-justify py-5 border-t-[3px] border-[#D9D9D9]">
 						ERP Skrip adalah salah satu produk dari Gaha Skrip Infra Prima, yang dimana menyediakan solusi perangkat lunak Enterprise Resource Planning (ERP) yang berfokus pada membantu bisnis mengelola dan mengintegrasikan berbagai aspek operasional Kususnya untuk Perusahaan Internet Service Provider (ISP). ERP Skrip menawarkan perangkat lunak yang memungkinkan perusahaan untuk mengotomatisasi dan merampingkan proses bisnis mereka, termasuk manajemen keuangan, inventaris, produksi, penjualan, sumber daya manusia, dan lain-lain.
@@ -39,7 +43,9 @@ const Footer = () => {
 					</div>
 					<div>
 						<div className="font-bold text-[#0C375A] mb-4">Menu</div>
-						<div className="font-medium mb-4">Beranda</div>
+						<div className="mb-4">
+							<Link href={'/'} className="font-medium">Beranda</Link>
+						</div>
 						<div className="font-medium mb-4">Fitur - Fitur</div>
 						<div className="font-medium mb-4">Harga</div>
 					</div>

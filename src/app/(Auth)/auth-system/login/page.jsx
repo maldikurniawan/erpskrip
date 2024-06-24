@@ -7,7 +7,6 @@ const page = () => {
             <div className='sm:block'>
                 <img className='w-full h-full object-cover' src="/assets/login.jpg" alt="" />
             </div>
-
             <div className='bg-white flex flex-col justify-center'>
                 <form className='max-w-[400px] w-full mx-auto rounded-lg bg-white p-8 px-8'>
                     <div className='text-4xl dark:text-white font-bold'>Masuk</div>
@@ -45,7 +44,6 @@ const page = () => {
                         </div>
                     </div>
                     <button className='flex items-center gap-2 my-5 py-3 px-10 bg-gray-900 shadow-lg text-white font-semibold rounded-lg'>Masuk <BsChevronRight /></button>
-
                 </form>
             </div>
         </div>

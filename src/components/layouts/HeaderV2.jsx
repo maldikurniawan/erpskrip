@@ -11,6 +11,10 @@ import { useEffect, useRef, useState } from "react";
 import { BsCreditCard } from "react-icons/bs";
 import { FaBars } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
+import { GrCube } from "react-icons/gr";
+import { HiOutlineWrenchScrewdriver } from "react-icons/hi2";
+import { IoBarChartOutline } from "react-icons/io5";
+import { PiMoney } from "react-icons/pi";
 import { TbChevronDown } from "react-icons/tb";
 
 const HeaderV2 = () => {
@@ -30,15 +34,10 @@ const HeaderV2 = () => {
 			link: "/",
 			menu: [
 				{
-					title: "Fitur 1",
+					title: "Lorem",
 					description: "Lorem ipsum dolor, sit amet consectetur",
 					link: "",
 				},
-				// {
-				// 	title: "Fitur 2",
-				// 	description: "Lorem ipsum dolor, sit amet consectetur",
-				// 	link: "",
-				// },
 			],
 		},
 		{
@@ -64,13 +63,13 @@ const HeaderV2 = () => {
 		<>
 			<header className="w-full fixed top-0 z-40">
 				<div className="relative px-10 md:px-28 h-16 sm:h-20 flex items-center justify-between transition-all duration-300 py-4 bg-[#111827]">
-					{/* <img
-						onClick={() => router.push("/")}
-						src="/assets/Logo-Qiupay.png"
-						alt="logo"
-						className="h-full cursor-pointer"
-					/> */}
-					<div className="font-bold text-xl md:text-3xl text-white">
+					<div className="font-bold text-xl flex md:text-3xl items-center gap-4 justify-center text-white">
+						<img
+							onClick={() => router.push("/")}
+							src="/assets/logo-erp.png"
+							alt="logo"
+							className="h-full w-8 cursor-pointer"
+						/>
 						ERPSkrip
 					</div>
 					<div className="hidden lg:flex items-center gap-x-2">
@@ -110,8 +109,8 @@ const HeaderV2 = () => {
 												// </Link>
 												<div className="flex flex-wrap gap-x-16 gap-y-6">
 													<div>
-														<div className="font-bold text-gray-900 mb-4">Teknis</div>
-														<div className="mb-4">
+														<div className="flex gap-2 items-center text-xl font-bold text-gray-900 mb-4"><HiOutlineWrenchScrewdriver />Teknis</div>
+														<div className="mb-4 border-t-[1px] border-gray-900 pt-4">
 															<Link href={'/config-olt'} className="font-medium text-gray-400">Konfigurasi OLT</Link>
 														</div>
 														<div className="font-medium text-gray-400 mb-4">Konfigurasi Router</div>
@@ -119,22 +118,22 @@ const HeaderV2 = () => {
 														<div className="font-medium text-gray-400 mb-4">Audit OLT</div>
 													</div>
 													<div>
-														<div className="font-bold text-gray-900 mb-4">Marketing</div>
-														<div className="font-medium text-gray-400 mb-4">Capaian</div>
+														<div className="flex gap-2 items-center text-xl font-bold text-gray-900 mb-4"><IoBarChartOutline />Marketing</div>
+														<div className="font-medium text-gray-400 mb-4 border-t-[1px] border-gray-900 pt-4">Capaian</div>
 														<div className="font-medium text-gray-400 mb-4">Registrasi Pelanggan</div>
 														<div className="font-medium text-gray-400 mb-4">Data Pelanggan</div>
 													</div>
 													<div>
-														<div className="font-bold text-gray-900 mb-4">Keuangan</div>
-														<div className="font-medium text-gray-400 mb-4">Kas Bank</div>
+														<div className="flex gap-2 items-center text-xl font-bold text-gray-900 mb-4"><PiMoney />Keuangan</div>
+														<div className="font-medium text-gray-400 mb-4 border-t-[1px] border-gray-900 pt-4">Kas Bank</div>
 														<div className="font-medium text-gray-400 mb-4">Akuntansi</div>
 														<div className="font-medium text-gray-400 mb-4">Arta Kelola</div>
 														<div className="font-medium text-gray-400 mb-4">Anggaran Belanja</div>
 														<div className="font-medium text-gray-400 mb-4">Monitoring</div>
 													</div>
 													<div>
-														<div className="font-bold text-gray-900 mb-4">Umum</div>
-														<div className="font-medium text-gray-400 mb-4">Dashboard</div>
+														<div className="flex gap-2 items-center text-xl font-bold text-gray-900 mb-4"><GrCube />Umum</div>
+														<div className="font-medium text-gray-400 mb-4 border-t-[1px] border-gray-900 pt-4">Dashboard</div>
 														<div className="font-medium text-gray-400 mb-4">Notifikasi</div>
 														<div className="font-medium text-gray-400 mb-4">Reminder</div>
 														<div className="font-medium text-gray-400 mb-4">Inventory</div>
@@ -179,7 +178,7 @@ const HeaderV2 = () => {
 				<div className="flex items-center justify-between text-white p-4">
 					{/* <img src="/assets/Logo-Qiupay.png" alt="logo" className="h-10" /> */}
 					<div className="font-bold text-xl md:text-3xl text-white">
-						ERPSkrip
+						{/* ERPSkrip */}
 					</div>
 					<FaXmark
 						className="cursor-pointer"
@@ -188,23 +187,58 @@ const HeaderV2 = () => {
 						}}
 					/>
 				</div>
-				<div className="p-4">
+				<div className="p-4 overflow-y-scroll h-96 text-center">
 					{menu.map((item, itemIdx) =>
 						item?.menu?.length > 0 ? (
 							<Disclosure key={itemIdx}>
-								<DisclosureButton className="w-full text-left rounded-md px-6 py-2 hover:bg-white/20 text-white font-medium whitespace-nowrap cursor-pointer flex items-center justify-between">
+								<DisclosureButton className="w-full rounded-md px-6 py-2 hover:bg-white/20 text-white font-medium whitespace-nowrap cursor-pointer flex items-center justify-center gap-2">
 									<div>{item.title}</div>
 									<TbChevronDown />
 								</DisclosureButton>
 								<DisclosurePanel>
 									{item.menu.map((itemMenu, itemMenuIdx) => (
-										<Link
-											key={itemMenuIdx}
-											href={itemMenu.link}
-											className="block rounded-md px-10 py-2 hover:bg-white/20 text-white font-medium whitespace-nowrap cursor-pointer"
-										>
-											{itemMenu.title}
-										</Link>
+										// <Link
+										// 	key={itemMenuIdx}
+										// 	href={itemMenu.link}
+										// 	className="block rounded-md px-10 py-2 hover:bg-white/20 text-white font-medium whitespace-nowrap cursor-pointer"
+										// >
+										// 	{itemMenu.title}
+										// </Link>
+										<div className="flex flex-wrap gap-x-16 gap-y-6 mt-6 justify-center">
+											<div>
+												<div className="flex gap-2 items-center font-bold text-white text-xl mb-4 text-center justify-center"><HiOutlineWrenchScrewdriver />Teknis</div>
+												<div className="mb-4 border-t-[1px] border-[#D9D9D9] pt-4">
+													<Link href={'/config-olt'} className="font-medium text-gray-400">Konfigurasi OLT</Link>
+												</div>
+												<div className="font-medium text-gray-400 mb-4">Konfigurasi Router</div>
+												<div className="font-medium text-gray-400 mb-4">Infrastruktur FTTX</div>
+												<div className="font-medium text-gray-400 mb-4">Audit OLT</div>
+											</div>
+											<div>
+												<div className="flex gap-2 items-center font-bold text-white text-xl mb-4 text-center justify-center"><IoBarChartOutline />Marketing</div>
+												<div className="font-medium text-gray-400 mb-4 border-t-[1px] border-[#c2a4a4] pt-4">Capaian</div>
+												<div className="font-medium text-gray-400 mb-4">Registrasi Pelanggan</div>
+												<div className="font-medium text-gray-400 mb-4">Data Pelanggan</div>
+											</div>
+											<div>
+												<div className="flex gap-2 items-center font-bold text-white text-xl mb-4 text-center justify-center"><PiMoney />Keuangan</div>
+												<div className="font-medium text-gray-400 mb-4 border-t-[1px] border-[#D9D9D9] pt-4">Kas Bank</div>
+												<div className="font-medium text-gray-400 mb-4">Akuntansi</div>
+												<div className="font-medium text-gray-400 mb-4">Arta Kelola</div>
+												<div className="font-medium text-gray-400 mb-4">Anggaran Belanja</div>
+												<div className="font-medium text-gray-400 mb-4">Monitoring</div>
+											</div>
+											<div>
+												<div className="flex gap-2 items-center font-bold text-white text-xl mb-4 text-center justify-center"><GrCube />Umum</div>
+												<div className="font-medium text-gray-400 mb-4 border-t-[1px] border-[#D9D9D9] pt-4">Dashboard</div>
+												<div className="font-medium text-gray-400 mb-4">Notifikasi</div>
+												<div className="font-medium text-gray-400 mb-4">Reminder</div>
+												<div className="font-medium text-gray-400 mb-4">Inventory</div>
+												<div className="font-medium text-gray-400 mb-4">Tiket Gangguan</div>
+												<div className="font-medium text-gray-400 mb-4">Request</div>
+												<div className="font-medium text-gray-400 mb-4">WhatsApp Blast</div>
+											</div>
+										</div>
 									))}
 								</DisclosurePanel>
 							</Disclosure>
