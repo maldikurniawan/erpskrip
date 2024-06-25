@@ -9,7 +9,7 @@ const Keuntungan = () => {
           <div>Keuntungan <br />
             Menggunakan</div>
           <div>
-            <span className="text-[#111827]">ERPSkrip</span>
+            <span className="text-[#0F172A]">ERPSkrip</span>
           </div>
         </div>
 

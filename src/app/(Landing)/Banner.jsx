@@ -4,7 +4,7 @@ import { FaArrowRight } from 'react-icons/fa'
 
 const Banner = () => {
     return (
-        <div className="relative overflow-hidden h-96 bg-gray-900 px-10 md:px-28 transition-all duration-300 pt-[60px] pb-20">
+        <div className="relative overflow-hidden h-96 bg-[#0F172A] px-10 md:px-28 transition-all duration-300 pt-[60px] pb-20">
             <div className='text-white flex flex-col items-center text-center'>
                 <div className='font-bold'>
                     MULAILAH KEMUDAHAN BERUSAHA SEKARANG

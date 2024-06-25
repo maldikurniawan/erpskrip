@@ -71,7 +71,7 @@ const Header = () => {
 	return (
 		<>
 			<header
-				className={`px-10 md:px-28 h-16 sm:h-20 flex items-center justify-between w-full fixed top-0 z-40 transition-all duration-300 py-4 ${scrolled ? "bg-[#111827] backdrop-blur shadow" : "bg-transparent"
+				className={`px-10 md:px-28 h-16 sm:h-20 flex items-center justify-between w-full fixed top-0 z-40 transition-all duration-300 py-4 ${scrolled ? "bg-[#0F172A] backdrop-blur shadow" : "bg-transparent"
 					}`}
 			>
 				<div className="font-bold text-xl flex md:text-3xl items-center gap-4 justify-center text-white">
@@ -102,23 +102,6 @@ const Header = () => {
 								>
 									<PopoverPanel className="absolute left-1/2 -ml-[500px] z-10 mt-5 w-[1200px] grid gap-2 bg-white shadow p-12 rounded-br-lg rounded-bl-lg overflow-hidden">
 										{item.menu.map((menuItem, menuItemIdx) => (
-											// <Link
-											// 	className="rounded-md hover:bg-gray-50 font-medium whitespace-nowrap p-2 flex items-center gap-4"
-											// 	key={menuItemIdx}
-											// 	href={menuItem.link}
-											// >
-											// 	<div className="flex h-10 w-10 shrink-0 items-center justify-center bg-[#1791F450] rounded-lg text-white sm:h-12 sm:w-12">
-											// 		<BsCreditCard className="w-6 h-6" color="#1791F4" />
-											// 	</div>
-											// 	<div className="w-80">
-											// 		<p className="text-sm text-gray-900 font-medium">
-											// 			{menuItem.title}
-											// 		</p>
-											// 		<p className="text-xs text-gray-500 w-full">
-											// 			{menuItem.description}
-											// 		</p>
-											// 	</div>
-											// </Link>
 											<div className="flex flex-wrap gap-x-36 gap-y-6 justify-center">
 												<div>
 													<div className="flex gap-2 items-center text-xl font-bold text-gray-900 mb-4"><HiOutlineWrenchScrewdriver />Teknis</div>
@@ -202,7 +185,7 @@ const Header = () => {
 					right: navOpen ? "0" : `-300px`,
 					bottom: "0",
 				}}
-				className="fixed z-50 top-0 h-screen min-[300px]:w-[300px] bg-[#111827]/50 backdrop-blur drop-shadow transition-[right,top] duration-500"
+				className="fixed z-50 top-0 h-screen min-[300px]:w-[300px] bg-[#0F172A]/50 backdrop-blur drop-shadow transition-[right,top] duration-500"
 			>
 				<div className="flex items-center justify-between text-white p-4">
 					{/* <img src="/assets/logo-erp.png" alt="logo" className="h-10" /> */}
@@ -226,13 +209,6 @@ const Header = () => {
 								</DisclosureButton>
 								<DisclosurePanel>
 									{item.menu.map((itemMenu, itemMenuIdx) => (
-										// <Link
-										// 	key={itemMenuIdx}
-										// 	href={itemMenu.link}
-										// 	className="block rounded-md px-10 py-2 hover:bg-white/20 text-white font-medium whitespace-nowrap cursor-pointer"
-										// >
-										// 	{itemMenu.title}
-										// </Link>
 										<div className="flex flex-wrap gap-x-16 gap-y-6 mt-6 justify-center">
 											<div>
 												<div className="flex gap-2 items-center font-bold text-white text-xl mb-4 text-center justify-center"><HiOutlineWrenchScrewdriver />Teknis</div>

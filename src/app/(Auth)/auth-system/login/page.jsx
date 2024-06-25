@@ -4,7 +4,7 @@ import { BsChevronRight } from 'react-icons/bs'
 const page = () => {
     return (
         <div className='grid grid-cols-1 sm:grid-cols-2 h-screen w-full'>
-            <div className="flex flex-wrap justify-center bg-gray-900">
+            <div className="flex flex-wrap justify-center bg-[#0F172A]">
                 <div
                     className="flex flex-col items-center justify-center"
                 >
@@ -65,7 +65,7 @@ const page = () => {
                             </div>
                         </div>
                     </div>
-                    <button className='flex items-center gap-2 my-5 py-3 px-10 bg-gray-900 shadow-lg text-white font-semibold rounded-lg'>Masuk <BsChevronRight /></button>
+                    <button className='flex items-center gap-2 my-5 py-3 px-10 bg-[#0F172A] shadow-lg text-white font-semibold rounded-lg'>Masuk <BsChevronRight /></button>
                 </form>
             </div>
         </div>

@@ -39,7 +39,7 @@ const FAQ = () => {
   ]);
 
   return (
-    <div className="relative overflow-hidden min-h-screen bg-gray-200 px-10 md:px-28 transition-all duration-300 pt-[100px] pb-16 flex flex-wrap gap-x-10 gap-y-8 justify-between">
+    <div className="relative overflow-hidden min-h-screen bg-[#CBD5E1] px-10 md:px-28 transition-all duration-300 pt-[100px] pb-16 flex flex-wrap gap-x-10 gap-y-8 justify-between">
       <div className="mb-12 overflow-hidden w-full">
         <div className="text-center text-3xl md:text-5xl text-black font-bold mb-2">
           Frequently Asked Questions

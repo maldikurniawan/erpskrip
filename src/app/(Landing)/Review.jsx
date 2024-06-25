@@ -53,7 +53,7 @@ const Review = () => {
     <div className="relative overflow-hidden min-h-screen bg-[#F7F7F7] px-10 md:px-28 transition-all duration-300 pt-[100px] pb-20">
       <div className="mb-12 text-center md:text-left">
         <div className="text-3xl md:text-5xl text-black font-bold mb-1 text-center">
-          Semua ISP Mencintai <span className="text-[#111827]">ERPSkrip</span> 
+          Semua ISP Mencintai <span className="text-[#0F172A]">ERPSkrip</span> 
         </div>
         <div className="text-[#A1A1A1] text-base md:text-lg text-center">
           Pandangan Kritis tentang Pengalaman Pengguna dengan Sistem ERP
@@ -89,7 +89,7 @@ const Review = () => {
               key={itemIdx}
               className="!flex items-center justify-center"
             >
-              <div className="rounded-bl-2xl rounded-tr-2xl overflow-hidden max-w-sm text-sm bg-gray-900 text-white shadow-lg">
+              <div className="rounded-bl-2xl rounded-tr-2xl overflow-hidden max-w-sm text-sm bg-[#0F172A] text-white shadow-lg">
                 <div className="p-4 pb-14 md:text-xl text-lg">{item.description}</div>
                 <div className="h-20 w-full relative">
                   <div className="absolute left-4 -top-12 flex gap-4 items-end mt-4">

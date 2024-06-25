@@ -30,10 +30,10 @@ const Fitur = () => {
     ]);
 
     return (
-        <div className="relative overflow-hidden min-h-screen bg-gray-100 px-10 md:px-28 transition-all duration-300 pt-[100px] pb-20">
+        <div className="relative overflow-hidden min-h-screen bg-[#F1F1F1] px-10 md:px-28 transition-all duration-300 pt-[100px] pb-20">
             <div className="mb-12">
                 <div className="text-center text-3xl md:text-5xl text-black font-bold mb-2">
-                    Fitur - Fitur <span className="text-[#111827]">ERPSkrip</span>
+                    Fitur - Fitur <span className="text-[#0F172A]">ERPSkrip</span>
                 </div>
                 <div className="text-gray-600 text-center text-base md:text-lg">
                     Jelajahi Fitur - Fitur Canggih ERP untuk Meningkatkan Efisiensi <br />
@@ -44,7 +44,7 @@ const Fitur = () => {
                 {fitur.map((item, itemIdx) => (
                     <div
                         key={itemIdx}
-                        className="w-64 flex flex-col bg-blue-50 shadow-lg rounded-md"
+                        className="w-64 flex flex-col bg-[#E2E8F0] shadow-lg rounded-md"
                     >
                         <div className="rounded-md overflow-hidden max-w-sm text-sm px-4 pt-4 text-black">
                             <img

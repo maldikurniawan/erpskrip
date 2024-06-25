@@ -9,7 +9,7 @@ const page = () => {
             <div className="relative overflow-hidden min-h-screen bg-[#F7F7F7] px-10 md:px-28 transition-all duration-300 pt-[120px] pb-20">
                 <div className='font-bold text-4xl mb-8 text-center'>Harga Spesial</div>
                 <div className="mb-3">
-                    <div className="rounded-2xl overflow-hidden w-full text-sm bg-gradient-to-br from-[#4B5563] to-[#111827] shadow flex flex-wrap">
+                    <div className="rounded-2xl overflow-hidden w-full text-sm bg-[#0F172A] shadow flex flex-wrap">
                         <div className="relative md:flex-1 w-full md:w-fit">
                             <div className="relative z-10 bg-white w-full h-full rounded-lg overflow-hidden mix-blend-multiply">
                                 <img
