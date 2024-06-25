@@ -7,25 +7,25 @@ const Fitur = () => {
             title: "Teknis",
             description:
                 "Konfigurasi OLT, Pengaturan Router, Audit Infrastruktur, dan Manajemen FTTX untuk mengoptimalkan ISP anda.",
-            icon: "/assets/keuntungan-3.png",
+            icon: "/assets/cog-outline.png",
         },
         {
             title: "Umum",
             description:
                 "Akses cepat ke semua pengaturan dasar dan informasi penting Perusahaan ISP Anda.",
-            icon: "/assets/keuntungan-3.png",
+            icon: "/assets/cube-outline.png",
         },
         {
             title: "Marketing",
             description:
                 "Analisis Pencapaian Penjualan, Registrasi Pelanggan, dan Data Pelanggan untuk meningkatkan bisnis Anda.",
-            icon: "/assets/keuntungan-3.png",
+            icon: "/assets/bar-chart-outline.png",
         },
         {
             title: "Keuangan",
             description:
                 "Laporan Keuangan, Penganggaran, dan Pemantauan Arus Kas dalam satu menu terintegrasi.",
-            icon: "/assets/keuntungan-3.png",
+            icon: "/assets/cash-outline.png",
         },
     ]);
 
@@ -44,17 +44,17 @@ const Fitur = () => {
                 {fitur.map((item, itemIdx) => (
                     <div
                         key={itemIdx}
-                        className="w-64 flex flex-col items-center justify-center bg-blue-50 shadow-lg rounded-md"
+                        className="w-64 flex flex-col bg-blue-50 shadow-lg rounded-md"
                     >
-                        <div className="rounded-md overflow-hidden max-w-sm p-2 text-sm text-black">
+                        <div className="rounded-md overflow-hidden max-w-sm text-sm px-4 pt-4 text-black">
                             <img
                                 src={item.icon}
                                 alt="pengguna"
-                                className="h-full w-full object-contain p-2"
+                                className="h-12 w-12 object-contain"
                             />
                         </div>
                         <div>
-                            <div className="px-4 pt-4 font-bold">{item.title}</div>
+                            <div className="px-4 font-bold">{item.title}</div>
                             <div className="px-4 pb-4 pt-2">{item.description}</div>
                         </div>
                     </div>

@@ -1,5 +1,5 @@
 "use client";
-import HeaderV2 from '@/components/layouts/HeaderV2'
+import Header from '@/components/layouts/Header'
 import React, { useState } from "react";
 import dayjs from "dayjs";
 import { generateDate, months } from "@/utils/calendar";
@@ -18,7 +18,7 @@ const page = () => {
 
     return (
         <main>
-            <HeaderV2 />
+            <Header />
             <div className="relative overflow-hidden min-h-screen bg-gray-200 px-10 md:px-28 transition-all duration-300 pt-[120px] pb-20">
                 <div className='font-bold text-4xl mb-2 text-center'>Buat Janji Bertemu</div>
                 <div className='text-gray-400 text-base md:text-lg mb-8 text-center'>Jelajahi Fitur - Fitur Canggih ERP untuk Meningkatkan Efisiensi <br /> Perusahaan ISP Anda</div>

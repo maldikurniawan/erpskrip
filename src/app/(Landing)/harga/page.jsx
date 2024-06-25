@@ -1,11 +1,11 @@
-import HeaderV2 from '@/components/layouts/HeaderV2'
+import Header from '@/components/layouts/Header'
 import React from 'react'
 import { FaArrowRight } from 'react-icons/fa'
 
 const page = () => {
     return (
         <main>
-            <HeaderV2 />
+            <Header />
             <div className="relative overflow-hidden min-h-screen bg-[#F7F7F7] px-10 md:px-28 transition-all duration-300 pt-[120px] pb-20">
                 <div className='font-bold text-4xl mb-8 text-center'>Harga Spesial</div>
                 <div className="mb-3">

@@ -4,8 +4,30 @@ import { BsChevronRight } from 'react-icons/bs'
 const page = () => {
     return (
         <div className='grid grid-cols-1 sm:grid-cols-2 h-screen w-full'>
-            <div className='sm:block'>
-                <img className='w-full h-full object-cover' src="/assets/login.jpg" alt="" />
+            <div className="flex flex-wrap justify-center bg-gray-900">
+                <div
+                    className="flex flex-col items-center justify-center"
+                >
+                    <div className="font-bold text-xl my-4 flex md:text-3xl items-center gap-4 justify-center text-white">
+                        <img
+                            src="/assets/logo-erp.png"
+                            alt="logo"
+                            className="h-8 w-8 cursor-pointer"
+                        />
+                        ERPSkrip
+                    </div>
+                    <div className="overflow-hidden w-96 my-4">
+                        <img
+                            src="/assets/erp-video.png"
+                            alt="pengguna"
+                            className="h-full w-full object-contain"
+                        />
+                    </div>
+                    <div className='text-center my-4'>
+                        <div className="font-bold text-white">Ubah Kebiasaan</div>
+                        <div className="text-gray-400">Hal ribet jangan terlalu lama dilakukan</div>
+                    </div>
+                </div>
             </div>
             <div className='bg-white flex flex-col justify-center'>
                 <form className='max-w-[400px] w-full mx-auto rounded-lg bg-white p-8 px-8'>

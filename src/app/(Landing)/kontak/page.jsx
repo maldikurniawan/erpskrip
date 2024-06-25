@@ -1,4 +1,4 @@
-import HeaderV2 from '@/components/layouts/HeaderV2'
+import Header from '@/components/layouts/Header'
 import React from 'react'
 import { CiMail } from 'react-icons/ci'
 import { IoPhonePortraitOutline } from 'react-icons/io5'
@@ -7,7 +7,7 @@ import { PiBuildingOffice } from 'react-icons/pi'
 const page = () => {
     return (
         <main>
-            <HeaderV2 />
+            <Header />
             <div className="relative overflow-hidden min-h-screen bg-gray-900 px-10 md:px-28 transition-all duration-300 pt-[120px] pb-36 flex flex-wrap items-center gap-y-12">
                 <div className="w-full lg:w-[576px] relative z-10">
                     <div className="font-bold text-3xl md:text-5xl text-white mb-6">

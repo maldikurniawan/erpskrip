@@ -1,10 +1,10 @@
-import HeaderV2 from '@/components/layouts/HeaderV2'
+import Header from '@/components/layouts/Header'
 import React from 'react'
 
 const page = () => {
     return (
         <main>
-            <HeaderV2 />
+            <Header />
             <div className="relative overflow-hidden min-h-screen bg-[#F7F7F7] px-10 md:px-28 transition-all duration-300 pt-[120px] pb-20">
                 <div className="mb-3">
                     <div className="rounded-2xl text-white md:text-5xl font-bold overflow-hidden w-full text-3xl bg-blue-950 shadow text-center py-24 mb-6">

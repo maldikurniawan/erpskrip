@@ -81,10 +81,10 @@ const Header = () => {
 						alt="logo"
 						className="h-full w-8 cursor-pointer"
 					/>
-					ERPSkrip
+					ERPSKRIP
 				</div>
 
-				<div className="hidden lg:flex items-center gap-x-2">
+				<div className="hidden xl:flex items-center gap-x-2">
 					{menu.map((item, itemIdx) =>
 						item?.menu?.length > 0 ? (
 							<Popover key={itemIdx} className="relative">
@@ -100,7 +100,7 @@ const Header = () => {
 									leaveFrom="opacity-100"
 									leaveTo="opacity-0"
 								>
-									<PopoverPanel className="absolute z-10 mt-6 w-max grid gap-2 bg-white shadow p-3 rounded-lg overflow-hidden">
+									<PopoverPanel className="absolute left-1/2 -ml-[500px] z-10 mt-5 w-[1200px] grid gap-2 bg-white shadow p-12 rounded-br-lg rounded-bl-lg overflow-hidden">
 										{item.menu.map((menuItem, menuItemIdx) => (
 											// <Link
 											// 	className="rounded-md hover:bg-gray-50 font-medium whitespace-nowrap p-2 flex items-center gap-4"
@@ -119,7 +119,7 @@ const Header = () => {
 											// 		</p>
 											// 	</div>
 											// </Link>
-											<div className="flex flex-wrap gap-x-16 gap-y-6">
+											<div className="flex flex-wrap gap-x-36 gap-y-6 justify-center">
 												<div>
 													<div className="flex gap-2 items-center text-xl font-bold text-gray-900 mb-4"><HiOutlineWrenchScrewdriver />Teknis</div>
 													<div className="mb-4 border-t-[1px] border-gray-900 pt-4">
@@ -174,24 +174,24 @@ const Header = () => {
 					<Link
 						href="/auth-system/login"
 						prefetch={false}
-						className="hidden px-4 py-2 lg:block text-white"
+						className="hidden px-4 py-2 xl:block text-white"
 					>
 						Sign In
 					</Link>
 					<Link
 						href="/ajukan"
 						prefetch={false}
-						className="hidden border border-white rounded-lg py-2 px-2 lg:block text-white"
+						className="hidden border border-white rounded-lg py-2 px-2 xl:block text-white"
 					>
-						<div className="flex">
-							Ajukan Demo <FaArrowRight className="mt-1 ml-2" />
+						<div className="flex items-center gap-2">
+							Ajukan Demo <FaArrowRight />
 						</div>
 					</Link>
 				</div>
 
 				<button
 					onClick={() => setNavOpen(true)}
-					className="block lg:hidden text-white"
+					className="block xl:hidden text-white"
 				>
 					<FaBars />
 				</button>

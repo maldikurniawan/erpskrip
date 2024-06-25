@@ -76,10 +76,10 @@ const FAQ = () => {
           </div>
         ))}
       </div>
-      <div className="w-full xl:flex-1 flex items-center justify-center">
-        <div className="relative z-0 bottom-20 w-60 mt-8">
+      <div className="w-full xl:flex-1">
+        <div className="relative md:absolute z-0 bottom-8 md:bottom-28 right-0 w-96 ">
           <img
-            src="/assets/phone.png"
+            src="/assets/phone-lepi.png"
             alt="hero"
             className="h-full w-full"
           />
