@@ -41,7 +41,7 @@ const FAQ = () => {
   return (
     <div className="relative overflow-hidden min-h-screen bg-[#CBD5E1] px-10 md:px-28 transition-all duration-300 pt-[100px] pb-16 flex flex-wrap gap-x-10 gap-y-8 justify-between">
       <div className="mb-12 overflow-hidden w-full">
-        <div className="text-center text-3xl md:text-5xl text-black font-bold mb-2">
+        <div className="text-center text-3xl md:text-6xl text-black font-bold mb-2">
           Frequently Asked Questions
         </div>
         <div className="text-gray-600 text-center text-base md:text-lg">
@@ -60,7 +60,7 @@ const FAQ = () => {
                 newFaq[itemIdx].open = f;
                 setFaq(newFaq);
               }}
-              className="bg-white p-5 flex justify-between items-center rounded-lg shadow-lg font-semibold cursor-pointer gap-x-4"
+              className="bg-white p-5 flex justify-between items-center rounded-lg shadow-lg font-semibold cursor-pointer mb-4"
             >
               <div>{item.title}</div>
               <div>{item.open ? <TbMinus /> : <TbPlus />}</div>
@@ -76,8 +76,8 @@ const FAQ = () => {
           </div>
         ))}
       </div>
-      <div className="w-full xl:flex-1">
-        <div className="relative md:absolute z-0 bottom-8 md:bottom-28 right-0 w-96 ">
+      <div className="w-full xl:flex xl:w-96">
+        <div className="relative md:absolute z-0 bottom-8 md:bottom-28 right-0 w-[450px]">
           <img
             src="/assets/phone-lepi.png"
             alt="hero"

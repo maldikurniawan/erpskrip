@@ -11,7 +11,7 @@ const page = () => {
                 <div className="mb-3">
                     <div className="rounded-2xl overflow-hidden w-full text-sm bg-[#0F172A] shadow flex flex-wrap">
                         <div className="relative md:flex-1 w-full md:w-fit">
-                            <div className="relative z-10 bg-white w-full h-full rounded-lg overflow-hidden mix-blend-multiply">
+                            <div className="relative z-10 bg-white w-full h-full rounded-lg overflow-hidden opacity-20">
                                 <img
                                     src="/assets/hand-shake.jpeg"
                                     alt="blog"

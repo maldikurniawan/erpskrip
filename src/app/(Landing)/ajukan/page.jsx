@@ -19,7 +19,7 @@ const page = () => {
     return (
         <main>
             <Header />
-            <div className="relative overflow-hidden min-h-screen bg-gray-200 px-10 md:px-28 transition-all duration-300 pt-[120px] pb-20">
+            <div className="relative overflow-hidden min-h-screen bg-[#F1F1F1] px-10 md:px-28 transition-all duration-300 pt-[120px] pb-20">
                 <div className='font-bold text-4xl mb-2 text-center'>Buat Janji Bertemu</div>
                 <div className='text-gray-400 text-base md:text-lg mb-8 text-center'>Jelajahi Fitur - Fitur Canggih ERP untuk Meningkatkan Efisiensi <br /> Perusahaan ISP Anda</div>
                 <form className="mb-3">
@@ -38,7 +38,7 @@ const page = () => {
                                                 </svg>
                                             </div>
                                             <input
-                                                type='text' className="peer w-full h-full bg-gray-100 focus:bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-gray-900 ps-10"
+                                                type='text' className="peer w-full h-full bg-[#F5F5F7] focus:bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-gray-900 ps-10"
                                                 placeholder=" " required/>
                                             <label
                                                 className="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-blue-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:before:ps-9 before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-gray-500 peer-focus:text-gray-900 before:border-blue-gray-200 peer-focus:before:!border-gray-900 after:border-blue-gray-200 peer-focus:after:!border-gray-900"><span className='text-red-900'>*</span>Nama Perusahaan
@@ -53,7 +53,7 @@ const page = () => {
                                                 </svg>
                                             </div>
                                             <input
-                                                type='text' className="peer w-full h-full bg-gray-100 focus:bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-gray-900 ps-10"
+                                                type='text' className="peer w-full h-full bg-[#F5F5F7] focus:bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-gray-900 ps-10"
                                                 placeholder=" " required/>
                                             <label
                                                 className="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-blue-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:before:ps-9 before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-gray-500 peer-focus:text-gray-900 before:border-blue-gray-200 peer-focus:before:!border-gray-900 after:border-blue-gray-200 peer-focus:after:!border-gray-900"><span className='text-red-900'>*</span>Alamat Perusahaan
@@ -68,7 +68,7 @@ const page = () => {
                                                 </svg>
                                             </div>
                                             <input
-                                                type='email' className="peer w-full h-full bg-gray-100 focus:bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-gray-900 ps-10"
+                                                type='email' className="peer w-full h-full bg-[#F5F5F7] focus:bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-gray-900 ps-10"
                                                 placeholder=" " required/>
                                             <label
                                                 className="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-blue-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:before:ps-9 before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-gray-500 peer-focus:text-gray-900 before:border-blue-gray-200 peer-focus:before:!border-gray-900 after:border-blue-gray-200 peer-focus:after:!border-gray-900"><span className='text-red-900'>*</span>Email Perusahaan
@@ -83,7 +83,7 @@ const page = () => {
                                                 </svg>
                                             </div>
                                             <input
-                                                type='text' className="peer w-full h-full bg-gray-100 focus:bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-gray-900 ps-10"
+                                                type='text' className="peer w-full h-full bg-[#F5F5F7] focus:bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-gray-900 ps-10"
                                                 placeholder=" " required/>
                                             <label
                                                 className="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-blue-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:before:ps-9 before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-gray-500 peer-focus:text-gray-900 before:border-blue-gray-200 peer-focus:before:!border-gray-900 after:border-blue-gray-200 peer-focus:after:!border-gray-900"><span className='text-red-900'>*</span>Nomor Telpon Perusahaan
@@ -98,7 +98,7 @@ const page = () => {
                                                 </svg>
                                             </div>
                                             <input
-                                                type='text' className="peer w-full h-full bg-gray-100 focus:bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-gray-900 ps-10"
+                                                type='text' className="peer w-full h-full bg-[#F5F5F7] focus:bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-gray-900 ps-10"
                                                 placeholder=" " />
                                             <label
                                                 className="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-blue-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:before:ps-9 before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-gray-500 peer-focus:text-gray-900 before:border-blue-gray-200 peer-focus:before:!border-gray-900 after:border-blue-gray-200 peer-focus:after:!border-gray-900">Website Perusahaan
@@ -111,14 +111,14 @@ const page = () => {
                                 </div>
                                 <div class="flex mb-4">
                                     <div class="flex items-center me-4">
-                                        <input type="radio" value="" name="inline-radio-group" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" onClick={() => setShowInput(false)} />
+                                        <input type="radio" value="" name="inline-radio-group" className="w-4 h-4 text-blue-600 bg-[#F5F5F7] border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" onClick={() => setShowInput(false)} />
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6 ml-2">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" />
                                         </svg>
                                         <label for="inline-2-radio" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300 mr-4">Online</label>
                                     </div>
                                     <div class="flex items-center me-4">
-                                        <input type="radio" value="" name="inline-radio-group" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" onClick={() => setShowInput(true)} />
+                                        <input type="radio" value="" name="inline-radio-group" className="w-4 h-4 text-blue-600 bg-[#F5F5F7] border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" onClick={() => setShowInput(true)} />
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6 ml-2">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M12 18.75H4.5a2.25 2.25 0 0 1-2.25-2.25V9m12.841 9.091L16.5 19.5m-1.409-1.409c.407-.407.659-.97.659-1.591v-9a2.25 2.25 0 0 0-2.25-2.25h-9c-.621 0-1.184.252-1.591.659m12.182 12.182L2.909 5.909M1.5 4.5l1.409 1.409" />
                                         </svg>
@@ -235,37 +235,37 @@ const page = () => {
                                     <div class="grid w-full grid-cols-4 md:grid-cols-7 gap-2 rounded-xl p-2">
                                         <div>
                                             <input type="radio" name="option" id="1" value="1" className="peer hidden" />
-                                            <label for="1" className="block cursor-pointer bg-gray-200 select-none rounded-xl p-2 text-center peer-checked:bg-gray-900 peer-checked:font-bold peer-checked:text-white">09.00</label>
+                                            <label for="1" className="block cursor-pointer bg-[#F5F5F7] select-none rounded-xl p-2 text-center peer-checked:bg-gray-900 peer-checked:font-bold peer-checked:text-white">09.00</label>
                                         </div>
 
                                         <div>
                                             <input type="radio" name="option" id="2" value="2" className="peer hidden" />
-                                            <label for="2" className="block cursor-pointer bg-gray-200 select-none rounded-xl p-2 text-center peer-checked:bg-gray-900 peer-checked:font-bold peer-checked:text-white">10.00</label>
+                                            <label for="2" className="block cursor-pointer bg-[#F5F5F7] select-none rounded-xl p-2 text-center peer-checked:bg-gray-900 peer-checked:font-bold peer-checked:text-white">10.00</label>
                                         </div>
 
                                         <div>
                                             <input type="radio" name="option" id="3" value="3" className="peer hidden" />
-                                            <label for="3" className="block cursor-pointer bg-gray-200 select-none rounded-xl p-2 text-center peer-checked:bg-gray-900 peer-checked:font-bold peer-checked:text-white">11.00</label>
+                                            <label for="3" className="block cursor-pointer bg-[#F5F5F7] select-none rounded-xl p-2 text-center peer-checked:bg-gray-900 peer-checked:font-bold peer-checked:text-white">11.00</label>
                                         </div>
 
                                         <div>
                                             <input type="radio" name="option" id="4" value="4" className="peer hidden" />
-                                            <label for="4" className="block cursor-pointer bg-gray-200 select-none rounded-xl p-2 text-center peer-checked:bg-gray-900 peer-checked:font-bold peer-checked:text-white">14.00</label>
+                                            <label for="4" className="block cursor-pointer bg-[#F5F5F7] select-none rounded-xl p-2 text-center peer-checked:bg-gray-900 peer-checked:font-bold peer-checked:text-white">14.00</label>
                                         </div>
 
                                         <div>
                                             <input type="radio" name="option" id="5" value="5" className="peer hidden" />
-                                            <label for="5" className="block cursor-pointer bg-gray-200 select-none rounded-xl p-2 text-center peer-checked:bg-gray-900 peer-checked:font-bold peer-checked:text-white">15.00</label>
+                                            <label for="5" className="block cursor-pointer bg-[#F5F5F7] select-none rounded-xl p-2 text-center peer-checked:bg-gray-900 peer-checked:font-bold peer-checked:text-white">15.00</label>
                                         </div>
 
                                         <div>
                                             <input type="radio" name="option" id="6" value="6" className="peer hidden" />
-                                            <label for="6" className="block cursor-pointer bg-gray-200 select-none rounded-xl p-2 text-center peer-checked:bg-gray-900 peer-checked:font-bold peer-checked:text-white">16.00</label>
+                                            <label for="6" className="block cursor-pointer bg-[#F5F5F7] select-none rounded-xl p-2 text-center peer-checked:bg-gray-900 peer-checked:font-bold peer-checked:text-white">16.00</label>
                                         </div>
 
                                         <div>
                                             <input type="radio" name="option" id="7" value="7" className="peer hidden" />
-                                            <label for="7" className="block cursor-pointer bg-gray-200 select-none rounded-xl p-2 text-center peer-checked:bg-gray-900 peer-checked:font-bold peer-checked:text-white">17.00</label>
+                                            <label for="7" className="block cursor-pointer bg-[#F5F5F7] select-none rounded-xl p-2 text-center peer-checked:bg-gray-900 peer-checked:font-bold peer-checked:text-white">17.00</label>
                                         </div>
                                     </div>
                                 </div>

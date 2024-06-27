@@ -5,7 +5,7 @@ const page = () => {
     return (
         <main>
             <Header />
-            <div className="relative overflow-hidden min-h-screen bg-[#0F172A] px-10 md:px-28 transition-all duration-300 pt-[150px] pb-20 flex flex-wrap gap-x-10 gap-y-8 justify-between">
+            <div className="relative overflow-hidden min-h-screen bg-[#0F172A] px-10 md:px-28 transition-all duration-300 pt-[150px] pb-20 flex flex-wrap gap-x-10 gap-y-8 justify-between custom-polygon z-20">
                 <div className="w-full xl:flex-1">
                     <div className="font-bold text-3xl md:text-5xl text-white mb-6">
                         <div>Konfigurasi</div>
@@ -22,7 +22,21 @@ const page = () => {
                 <div className="w-full xl:flex-1">
                     <iframe className='w-full h-full aspect-video rounded-md' src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=jDPUZuZyN1WHNcef" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
+                <div className="absolute z-10 bottom-0 left-0 opacity-5 w-screen min-w-[1280px]">
+                    <img
+                        src="/assets/lineart.png"
+                        alt="wave"
+                        className="h-full w-[1920px]"
+                    />
+                </div>
             </div>
+            <div className="absolute z-10 bottom-0 right-0 xl:block hidden">
+				<img
+					src="/assets/kotak.png"
+					alt="wave"
+					className="h-40 w-40"
+				/>
+			</div>
         </main>
     )
 }

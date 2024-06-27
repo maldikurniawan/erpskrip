@@ -16,24 +16,29 @@ const page = () => {
                     <div className="text-gray-400 text-base md:text-lg mb-4">
                         Jelajahi Fitur - Fitur Canggih ERP untuk Meningkatkan Efisiensi Perusahaan ISP Anda
                     </div>
-                    <div className="flex items-center gap-2 pr-3 py-3 text-white font-bold">
+                    <div className="flex items-center gap-2 pr-3 py-3 text-white">
                         <PiBuildingOffice className='h-6 w-6' />Jalan Alam Gaya N0. 42, Way Halim, Bandar Lampung, Lampung
                     </div>
-                    <div className="flex items-center gap-2 pr-3 py-3 text-white font-bold">
+                    <div className="flex items-center gap-2 pr-3 py-3 text-white">
                         <CiMail className='h-6 w-6' />gerryarisman96@gmail.com
                     </div>
-                    <div className="flex items-center gap-2 pr-3 py-3 text-white font-bold">
+                    <div className="flex items-center gap-2 pr-3 py-3 text-white">
                         <IoPhonePortraitOutline className='h-6 w-6' /> +62 21 7987 8923
                     </div>
                 </div>
-                <div className="w-full flex-1 flex items-center justify-center xl:justify-end relative z-10">
-                    <div className="w-96">
-                        <img
-						src="/assets/business-man.png"
-						alt="hero"
-						className="h-full w-full"
-					/>
-                    </div>
+                <div className="md:absolute relative z-10 bottom-0 right-0">
+                    <img
+                        src="/assets/business-man.png"
+                        alt="wave"
+                        className="h-full w-[450px]"
+                    />
+                </div>
+                <div className="absolute z-10 bottom-0 left-0 opacity-5 w-screen min-w-[1280px]">
+                    <img
+                        src="/assets/lineart.png"
+                        alt="wave"
+                        className="h-full w-[1920px]"
+                    />
                 </div>
             </div>
         </main>

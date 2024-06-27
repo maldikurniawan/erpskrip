@@ -32,7 +32,7 @@ const Fitur = () => {
     return (
         <div className="relative overflow-hidden min-h-screen bg-[#F1F1F1] px-10 md:px-28 transition-all duration-300 pt-[100px] pb-20">
             <div className="mb-12">
-                <div className="text-center text-3xl md:text-5xl text-black font-bold mb-2">
+                <div className="text-center text-3xl md:text-6xl text-black font-bold mb-2">
                     Fitur - Fitur <span className="text-[#0F172A]">ERPSkrip</span>
                 </div>
                 <div className="text-gray-600 text-center text-base md:text-lg">
@@ -44,9 +44,9 @@ const Fitur = () => {
                 {fitur.map((item, itemIdx) => (
                     <div
                         key={itemIdx}
-                        className="w-64 flex flex-col bg-[#E2E8F0] shadow-lg rounded-md"
+                        className="w-64 flex flex-col bg-[#E2E8F0] rounded-md"
                     >
-                        <div className="rounded-md overflow-hidden max-w-sm text-sm px-4 pt-4 text-black">
+                        <div className="rounded-md overflow-hidden max-w-sm text-sm px-4 pt-4 pb-2 text-black">
                             <img
                                 src={item.icon}
                                 alt="pengguna"
@@ -60,6 +60,20 @@ const Fitur = () => {
                     </div>
                 ))}
             </div>
+            <div className="absolute z-10 top-0 left-0 w-screen min-w-[1280px]">
+				<img
+					src="/assets/kotak-kiri.png"
+					alt="wave"
+					className="h-20 w-20"
+				/>
+			</div>
+            <div className="absolute z-10 bottom-0 right-0">
+				<img
+					src="/assets/kotak-kanan.png"
+					alt="wave"
+					className="h-20 w-20"
+				/>
+			</div>
         </div>
     );
 }

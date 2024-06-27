@@ -71,8 +71,7 @@ const Header = () => {
 	return (
 		<>
 			<header
-				className={`px-10 md:px-28 h-16 sm:h-20 flex items-center justify-between w-full fixed top-0 z-40 transition-all duration-300 py-4 ${scrolled ? "bg-[#0F172A] backdrop-blur shadow" : "bg-transparent"
-					}`}
+				className="px-10 md:px-28 h-16 sm:h-20 flex items-center justify-between w-full fixed top-0 z-40 transition-all duration-300 py-4 bg-[#0F172A]"
 			>
 				<div className="font-bold text-xl flex md:text-3xl items-center gap-4 justify-center text-white">
 					<img

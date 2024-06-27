@@ -52,7 +52,7 @@ const Review = () => {
   return (
     <div className="relative overflow-hidden min-h-screen bg-[#F7F7F7] px-10 md:px-28 transition-all duration-300 pt-[100px] pb-20">
       <div className="mb-12 text-center md:text-left">
-        <div className="text-3xl md:text-5xl text-black font-bold mb-1 text-center">
+        <div className="text-3xl md:text-6xl text-black font-bold mb-1 text-center">
           Semua ISP Mencintai <span className="text-[#0F172A]">ERPSkrip</span> 
         </div>
         <div className="text-[#A1A1A1] text-base md:text-lg text-center">
@@ -124,6 +124,27 @@ const Review = () => {
           ))}
         </Swiper>
       </div>
+      <div className="absolute hidden md:block z-0 bottom-0 right-10">
+				<img
+					src="/assets/kotak.png"
+					alt="wave"
+					className="h-40 w-40"
+				/>
+			</div>
+      <div className="absolute hidden md:block z-0 top-0 left-10">
+				<img
+					src="/assets/kotak.png"
+					alt="wave"
+					className="h-40 w-40"
+				/>
+			</div>
+      <div className="absolute z-0 -bottom-40 left-32">
+				<img
+					src="/assets/kotak-biru.png"
+					alt="wave"
+					className="h-72 w-72"
+				/>
+			</div>
     </div>
   );
 }

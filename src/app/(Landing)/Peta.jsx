@@ -2,8 +2,8 @@ import React from 'react'
 
 const Peta = () => {
   return (
-    <div className='relative overflow-hidden z-0 min-h-screen bg-[#0F172A] px-10 md:px-28 transition-all duration-300 pt-[60px] pb-20'>
-      <div className='text-white relative z-20 font-bold flex flex-col items-center text-center text-3xl md:text-6xl md:pt-40 pt-80 gap-4'>
+    <div className='relative overflow-hidden z-0 min-h-screen bg-[#1E293B] px-10 md:px-28 transition-all duration-300 pt-[60px] pb-20'>
+      <div className='text-white relative z-20 font-bold flex flex-col items-center text-center text-3xl md:text-6xl md:pt-40 py-80 gap-4'>
         <div>
           11,658,467
         </div>
