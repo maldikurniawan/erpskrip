@@ -77,7 +77,7 @@ const FAQ = () => {
         ))}
       </div>
       <div className="w-full xl:flex xl:w-96">
-        <div className="relative md:absolute z-0 bottom-8 md:bottom-28 right-0 w-[450px]">
+        <div className="relative min-[450px]:hidden xl:block xl:absolute z-0 bottom-8 xl:bottom-28 right-0 w-[450px]">
           <img
             src="/assets/phone-lepi.png"
             alt="hero"

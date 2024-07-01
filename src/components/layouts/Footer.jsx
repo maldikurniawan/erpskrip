@@ -51,7 +51,7 @@ const Footer = () => {
 					</div>
 				</div>
 			</div>
-			<div className="py-5 text-xs md:text-sm justify-between w-full font-semibold flex border-t-[3px] border-[#D9D9D9]">
+			<div className="py-5 text-xs md:text-sm justify-between w-full font-semibold min-[500px]:flex border-t-[3px] border-[#D9D9D9]">
 				<div>
 					© 2024 ERPSkrip. All rights reserved
 				</div>
