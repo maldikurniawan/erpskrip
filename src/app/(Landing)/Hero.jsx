@@ -4,7 +4,7 @@ import { FaRegCirclePlay } from "react-icons/fa6";
 const Hero = () => {
 	return (
 		<main>
-			<div className="relative overflow-hidden min-h-screen bg-[#0F172A] px-10 md:px-28 transition-all duration-300 pt-[120px] pb-36 flex flex-wrap items-center gap-y-12 custom-polygon z-20">
+			<div className="relative overflow-hidden min-h-screen bg-[#0F172A] px-10 md:px-28 transition-all duration-300 pt-[120px] flex flex-wrap items-center gap-y-12 custom-polygon z-20">
 				<div className="w-full lg:w-[576px] text-center md:text-left relative z-10">
 					<div className="font-bold text-3xl md:text-5xl text-white mb-6">
 						<div>ERPSkrip</div>

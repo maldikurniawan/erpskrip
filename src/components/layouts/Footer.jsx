@@ -52,7 +52,7 @@ const Footer = () => {
 				</div>
 			</div>
 			<div className="py-5 text-xs md:text-sm justify-between w-full font-semibold min-[500px]:flex border-t-[3px] border-[#D9D9D9]">
-				<div>
+				<div className="mb-2">
 					© 2024 ERPSkrip. All rights reserved
 				</div>
 				<div className="flex gap-4">

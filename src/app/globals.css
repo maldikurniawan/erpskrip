@@ -31,9 +31,9 @@
 }
 
 .land:hover {
-	fill: #CCCCCC;
+	fill: #4E7D00;
 	fill-opacity: 1;
-	stroke: white;
+	stroke: #A3E635;
 	stroke-opacity: 1;
 	stroke-width: 0.5;
 }
@@ -46,9 +46,9 @@
 
 .dot {
 	animation: 1s blink infinite;
-	fill: #CCCCCC;
+	fill: #4E7D00;
 	fill-opacity: 1;
-	stroke: white;
+	stroke: #A3E635;
 	stroke-opacity: 1;
 	stroke-width: 0.5;
 }

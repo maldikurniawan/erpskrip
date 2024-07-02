@@ -2,7 +2,7 @@ import React from 'react'
 
 const Peta = () => {
   return (
-    <div className='relative overflow-hidden z-0 min-h-screen bg-[#1E293B] px-10 sm:px-28 transition-all duration-300 pt-[50px] xl:pb-20'>
+    <div className='relative overflow-hidden z-0 h-96 md:min-h-screen bg-[#1E293B] px-10 sm:px-28 transition-all duration-300 pt-[50px] xl:pb-20'>
       <div className='text-white relative font-bold flex flex-col items-center text-center text-base sm:text-3xl xl:text-6xl mb-8'>
         <div>
           11,658,467
