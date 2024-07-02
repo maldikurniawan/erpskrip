@@ -101,7 +101,7 @@ const Header = () => {
 								>
 									<PopoverPanel className="absolute left-1/2 -ml-[500px] z-10 mt-5 w-[1200px] grid gap-2 bg-white shadow p-12 rounded-br-lg rounded-bl-lg overflow-hidden">
 										{item.menu.map((menuItem, menuItemIdx) => (
-											<div className="flex flex-wrap gap-x-36 gap-y-6 justify-center">
+											<div key={menuItemIdx} className="flex flex-wrap gap-x-36 gap-y-6 justify-center">
 												<div>
 													<div className="flex gap-2 items-center text-xl font-bold text-gray-900 mb-4"><HiOutlineWrenchScrewdriver />Teknis</div>
 													<div className="mb-4 border-t-[1px] border-gray-900 pt-4">
@@ -208,7 +208,7 @@ const Header = () => {
 								</DisclosureButton>
 								<DisclosurePanel>
 									{item.menu.map((itemMenu, itemMenuIdx) => (
-										<div className="flex flex-wrap gap-x-16 gap-y-6 mt-6 justify-center">
+										<div key={itemMenuIdx} className="flex flex-wrap gap-x-16 gap-y-6 mt-6 justify-center">
 											<div>
 												<div className="flex gap-2 items-center font-bold text-white text-xl mb-4 text-center justify-center"><HiOutlineWrenchScrewdriver />Teknis</div>
 												<div className="mb-4 border-t-[1px] border-[#D9D9D9] pt-4">
