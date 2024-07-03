@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { ReduxProvider } from "@/redux/provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +16,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" style={{scrollBehavior:'smooth'}}>
-      <body className="bg-[#F1F1F1]">{children}</body>
+    <html lang="en" style={{ scrollBehavior: 'smooth' }}>
+      <body className="bg-[#F1F1F1]">
+        <ReduxProvider>{children}</ReduxProvider>
+      </body>
     </html>
   );
 }

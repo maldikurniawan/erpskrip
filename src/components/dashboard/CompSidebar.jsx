@@ -69,7 +69,7 @@ const CompSidebar = ({ sideOpen, setSideOpen }) => {
             <Link
               key={itemIdx}
               href={item.link}
-              className="flex items-center gap-2 p-2 hover:bg-white rounded-lg hover:text-slate-600"
+              className="flex items-center gap-2 p-2 hover:bg-white rounded-lg hover:text-black text-base"
             >
               <div>
                 {item.icon}
