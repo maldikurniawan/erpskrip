@@ -44,7 +44,7 @@ const page = () => {
       <Header />
       <div className="relative overflow-hidden min-h-screen bg-[#F7F7F7] px-10 md:px-28 transition-all duration-300 pt-[120px] pb-20">
         <div className="mb-3">
-          <div className="rounded-2xl text-white md:text-5xl font-bold overflow-hidden w-full text-3xl bg-[#0B193E] shadow text-center py-24 mb-8">
+          <div className="rounded-2xl text-white md:text-5xl font-bold overflow-hidden w-full text-3xl bg-[#0B193E] shadow text-center min-[450px]:py-20 py-10 mb-8">
             Frequently Asked Questions
           </div>
           <div className="w-full xl:flex-1">

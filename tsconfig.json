@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/(Landing)/page.jsx", "src/app/layout.tsx", "src/app/(Landing)/Peta.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/(Landing)/page.jsx", "src/app/layout.tsx", "src/app/(Landing)/Peta.jsx", "src/components/ui/side-container/side.jsx"],
   "exclude": ["node_modules"]
 }
