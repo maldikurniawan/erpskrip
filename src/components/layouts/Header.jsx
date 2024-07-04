@@ -257,14 +257,15 @@ const Header = () => {
 						)
 					)}
 
+					<div className="border-t-[1px] border-[#D9D9D9] my-2"></div>
 					<Link href={'/auth-system/login'} prefetch={false}>
-						<div className="px-6 py-2 mt-2 text-white font-medium whitespace-nowrap cursor-pointer border-t-[1px] border-[#D9D9D9]">
+						<div className="px-6 py-2 text-white hover:bg-white/20 font-medium whitespace-nowrap cursor-pointer rounded-lg">
 							Sign In
 						</div>
 					</Link>
 
 					<Link href={'/ajukan'} prefetch={false}>
-						<div className="flex items-center justify-center gap-2 px-6 py-2 text-white border border-white rounded-lg font-medium whitespace-nowrap cursor-pointer">
+						<div className="flex items-center hover:bg-white/20 justify-center gap-2 px-6 py-2 text-white border border-white rounded-lg font-medium whitespace-nowrap cursor-pointer">
 							Ajukan Demo<FaArrowRight />
 						</div>
 					</Link>

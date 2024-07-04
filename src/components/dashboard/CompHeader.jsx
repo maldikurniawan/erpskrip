@@ -1,8 +1,15 @@
 import React, { Fragment } from "react";
 import { icons } from "../../../public/icons";
 import { Popover, PopoverButton, PopoverPanel, Transition } from "@headlessui/react";
+import { useRouter } from "next/navigation";
 
 const CompHeader = ({ sideOpen, setSideOpen }) => {
+  const router = useRouter();
+  const handleLogout = () => {
+    localStorage.removeItem("access");
+    localStorage.removeItem("refresh");
+    router.push('/auth-system/login');
+  };
   return (
     <Fragment>
       <div className="w-full flex bg-white py-2 justify-between items-center px-3 drop-shadow-sm">
@@ -39,6 +46,7 @@ const CompHeader = ({ sideOpen, setSideOpen }) => {
               </div>
               <div className="flex flex-col">
                 <button
+                  onClick={handleLogout}
                   className="text-xs py-2 px-2 rounded-lg text-left hover:bg-white hover:text-slate-600 transition-all"
                 >
                   Keluar
