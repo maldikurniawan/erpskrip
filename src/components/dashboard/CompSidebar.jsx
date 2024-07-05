@@ -25,7 +25,7 @@ const CompSidebar = ({ sideOpen, setSideOpen }) => {
       icon: <MdSpaceDashboard />,
     },
     {
-      title: "Ajuan Bertemu",
+      title: "Janji",
       link: "/dashboard/ajukan-bertemu",
       icon: <MdPeople />,
     },

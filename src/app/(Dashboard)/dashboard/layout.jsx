@@ -1,12 +1,24 @@
 "use client";
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import CompSidebar from "../../../components/dashboard/CompSidebar";
 import CompHeader from "../../../components/dashboard/CompHeader";
+import { useRouter } from 'next/navigation';
 
 const layout = ({ children }) => {
-    const [sideOpen, setSideOpen] = useState(
-        window.innerWidth < 640 ? false : true
-    );
+    const [sideOpen, setSideOpen] = useState(true);
+    const router = useRouter();
+
+    useEffect(() => {
+        const token = localStorage.getItem('access');
+        if (!token) {
+            router.replace('/auth-system/login');
+        }
+
+        if (typeof window !== 'undefined') {
+            setSideOpen(window.innerWidth >= 640);
+        }
+    }, [router]);
+
     return (
         <Fragment>
             <div className="flex ">
