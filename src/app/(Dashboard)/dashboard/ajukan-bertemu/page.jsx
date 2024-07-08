@@ -8,8 +8,10 @@ import { deleteData, getData } from "../../../../actions/index";
 import { API_URL_janji, API_URL_janjiupdate } from "../../../../constants/index";
 import { janjiReducers } from "../../../../redux/reducers/janjiSlice";
 import { BiSortDown, BiSortUp } from "react-icons/bi";
+import { useRouter } from "next/navigation";
 
 const page = () => {
+  const router = useRouter();
   const dispatch = useDispatch();
   const tableHead = [
     { title: "No", field: "id" },
@@ -55,7 +57,7 @@ const page = () => {
   };
 
   const onEdit = (item) => {
-    navigate(`/dashboard`, {
+    router.push(`/dashboard`, {
       state: {
         item,
       },
@@ -140,9 +142,9 @@ const page = () => {
         </h1>
         <button
           className="text-xs md:text-sm whitespace-nowrap font-medium px-4 py-2 bg-primary-base hover:bg-primary-baseHover active:bg-primary-baseActive text-white rounded-lg shadow hover:shadow-lg transition-all"
-          onClick={() => navigate("/dashboard")}
+          onClick={() => router.push("/dashboard")}
         >
-          Add Articles
+          Tambah Janji
         </button>
       </div>
       <br />

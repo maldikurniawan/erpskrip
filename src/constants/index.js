@@ -1,4 +1,4 @@
-const host = "http://192.168.120.41:8000";
+const host = "http://192.168.1.29:8000";
 const api = "/api";
 
 export const baseurl = `${host}${api}`;

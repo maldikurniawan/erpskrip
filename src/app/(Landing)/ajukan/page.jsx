@@ -7,6 +7,8 @@ import cn from "@/utils/cn";
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 import { BsChevronRight, BsExclamationLg } from 'react-icons/bs';
 import { IoMdClose } from 'react-icons/io';
+import axios from 'axios';
+import Swal from 'sweetalert2';
 
 const page = () => {
     const days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
@@ -16,14 +18,39 @@ const page = () => {
     const [selectDate, setSelectDate] = useState(currentDate);
     const [showModal, setShowModal] = React.useState(false);
     const [showInput, setShowInput] = React.useState(false);
+    const [inputData, setInputData] = useState({
+        perusahaan: '',
+        alamat_perusahaan: '',
+        email_perusahaan: '',
+        nomor_perusahaan: '',
+        web_perusahaan: '',
+        meeting: 'online',
+        alamat_meeting: '',
+        rencana_tanggal: '2024-07-27T10:57:00Z',
+        created_at: '2024-07-08T03:10:39.298863Z',
+    })
+
+    function handleSubmit(event) {
+        event.preventDefault()
+        axios.post('http://192.168.1.29:8000/api/detailpembuatjanji/', inputData)
+            .then(res => {
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Berhasil Membuat Janji!",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            }).catch(err => console.log(err));
+    }
 
     return (
         <main>
             <Header />
-            <div className="relative overflow-hidden min-h-screen bg-[#F1F1F1] max-[450px]:px-0 px-10 md:px-28 transition-all duration-300 pt-[120px] pb-20">
+            <div className="relative overflow-hidden min-h-screen bg-[#F1F1F1] max-[450px]:px-0 px-10 xl:px-28 transition-all duration-300 pt-[120px] pb-20">
                 <div className='font-bold text-4xl mb-2 text-center'>Buat Janji Bertemu</div>
                 <div className='text-gray-400 text-base md:text-lg mb-8 text-center'>Jelajahi Fitur - Fitur Canggih ERP untuk Meningkatkan Efisiensi <br /> Perusahaan ISP Anda</div>
-                <form className="mb-3">
+                <form className="mb-3" onSubmit={handleSubmit}>
                     <div className='rounded-2xl overflow-hidden w-full text-sm bg-white shadow p-8'>
                         <div className="flex flex-wrap gap-4">
                             <div className="relative md:flex-1 w-full md:w-fit">
@@ -40,7 +67,8 @@ const page = () => {
                                             </div>
                                             <input
                                                 type='text' className="peer w-full h-full bg-[#F5F5F7] focus:bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-gray-900 ps-10"
-                                                placeholder=" " required />
+                                                placeholder=" " required
+                                                onChange={e => setInputData({ ...inputData, perusahaan: e.target.value })} />
                                             <label
                                                 className="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-blue-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:before:ps-9 before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-gray-500 peer-focus:text-gray-900 before:border-blue-gray-200 peer-focus:before:!border-gray-900 after:border-blue-gray-200 peer-focus:after:!border-gray-900"><span className='text-red-900'>*</span>Nama Perusahaan
                                             </label>
@@ -55,7 +83,8 @@ const page = () => {
                                             </div>
                                             <input
                                                 type='text' className="peer w-full h-full bg-[#F5F5F7] focus:bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-gray-900 ps-10"
-                                                placeholder=" " required />
+                                                placeholder=" " required
+                                                onChange={e => setInputData({ ...inputData, alamat_perusahaan: e.target.value })} />
                                             <label
                                                 className="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-blue-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:before:ps-9 before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-gray-500 peer-focus:text-gray-900 before:border-blue-gray-200 peer-focus:before:!border-gray-900 after:border-blue-gray-200 peer-focus:after:!border-gray-900"><span className='text-red-900'>*</span>Alamat Perusahaan
                                             </label>
@@ -70,7 +99,8 @@ const page = () => {
                                             </div>
                                             <input
                                                 type='email' className="peer w-full h-full bg-[#F5F5F7] focus:bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-gray-900 ps-10"
-                                                placeholder=" " required />
+                                                placeholder=" " required
+                                                onChange={e => setInputData({ ...inputData, email_perusahaan: e.target.value })} />
                                             <label
                                                 className="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-blue-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:before:ps-9 before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-gray-500 peer-focus:text-gray-900 before:border-blue-gray-200 peer-focus:before:!border-gray-900 after:border-blue-gray-200 peer-focus:after:!border-gray-900"><span className='text-red-900'>*</span>Email Perusahaan
                                             </label>
@@ -85,7 +115,8 @@ const page = () => {
                                             </div>
                                             <input
                                                 type='text' className="peer w-full h-full bg-[#F5F5F7] focus:bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-gray-900 ps-10"
-                                                placeholder=" " required />
+                                                placeholder=" " required
+                                                onChange={e => setInputData({ ...inputData, nomor_perusahaan: e.target.value })} />
                                             <label
                                                 className="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-blue-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:before:ps-9 before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-gray-500 peer-focus:text-gray-900 before:border-blue-gray-200 peer-focus:before:!border-gray-900 after:border-blue-gray-200 peer-focus:after:!border-gray-900"><span className='text-red-900'>*</span>No. Telp Perusahaan
                                             </label>
@@ -100,7 +131,7 @@ const page = () => {
                                             </div>
                                             <input
                                                 type='text' className="peer w-full h-full bg-[#F5F5F7] focus:bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-gray-900 ps-10"
-                                                placeholder=" " />
+                                                placeholder=" " onChange={e => setInputData({ ...inputData, web_perusahaan: e.target.value })} />
                                             <label
                                                 className="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-blue-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:before:ps-9 before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-gray-500 peer-focus:text-gray-900 before:border-blue-gray-200 peer-focus:before:!border-gray-900 after:border-blue-gray-200 peer-focus:after:!border-gray-900">Website Perusahaan
                                             </label>
@@ -138,7 +169,7 @@ const page = () => {
                                                 </div>
                                                 <input
                                                     type='text' className="peer w-full h-full bg-gray-100 focus:bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-gray-900 ps-10"
-                                                    placeholder=" " />
+                                                    placeholder=" " onChange={e => setInputData({ ...inputData, alamat_meeting: e.target.value })} />
                                                 <label
                                                     className="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-blue-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:before:ps-9 before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-gray-500 peer-focus:text-gray-900 before:border-blue-gray-200 peer-focus:before:!border-gray-900 after:border-blue-gray-200 peer-focus:after:!border-gray-900">Alamat Pertemuan
                                                 </label>
@@ -183,7 +214,7 @@ const page = () => {
                                     </div>
                                 </div>
                                 <div className='border border-black rounded-md p-2 '>
-                                    <div className="grid grid-cols-7 max-[530px]:hidden">
+                                    <div className="grid grid-cols-7 max-[875px]:hidden">
                                         {days.map((day, index) => {
                                             return (
                                                 <div
@@ -195,7 +226,7 @@ const page = () => {
                                             );
                                         })}
                                     </div>
-                                    <div className="grid grid-cols-7 min-[530px]:hidden">
+                                    <div className="grid grid-cols-7 min-[875px]:hidden">
                                         {days2.map((day, index) => {
                                             return (
                                                 <div
@@ -245,7 +276,7 @@ const page = () => {
                                     Waktu Meeting
                                 </div>
                                 <div className="grid w-full place-items-center">
-                                    <div className="grid w-full grid-cols-4 md:grid-cols-7 gap-2 rounded-xl p-2">
+                                    <div className="grid w-full grid-cols-4 xl:grid-cols-7 gap-2 rounded-xl p-2">
                                         <div>
                                             <input type="radio" name="option" id="1" value="1" className="peer hidden" />
                                             <label htmlFor="1" className="block cursor-pointer bg-[#F5F5F7] select-none rounded-xl p-2 text-center peer-checked:bg-gray-900 peer-checked:font-bold peer-checked:text-white">09.00</label>
@@ -286,7 +317,7 @@ const page = () => {
                         </div>
                         <div className="py-5 text-xs gap-4 md:text-sm text-white min-[450px]:flex border-t-[3px] border-[#D9D9D9] mt-4">
                             <button className='bg-gray-800 py-3 max-[450px]:w-full max-[450px]:mb-2 rounded-lg md:px-10 px-4'>Buat Janji</button>
-                            <button className='bg-red-700 py-3 max-[450px]:w-full max-[450px]:mb-2 rounded-lg md:px-10 px-4'>Batalkan</button>
+                            <div className='bg-red-700 py-3 text-center max-[450px]:w-full max-[450px]:mb-2 rounded-lg md:px-10 px-4 cursor-pointer'>Batalkan</div>
                         </div>
                     </div>
                 </form>
