@@ -9,6 +9,7 @@ import { API_URL_janji, API_URL_janjiupdate } from "../../../../constants/index"
 import { janjiReducers } from "../../../../redux/reducers/janjiSlice";
 import { BiSortDown, BiSortUp } from "react-icons/bi";
 import { useRouter } from "next/navigation";
+import moment from 'moment';
 
 const page = () => {
   const router = useRouter();
@@ -28,6 +29,7 @@ const page = () => {
     getJanjiResult,
     getJanjiLoading,
     getJanjiError,
+    addJanjiResult,
     deleteJanjiResult,
   } = useSelector((state) => state.janji);
   const [limit, setLimit] = useState(10);
@@ -57,7 +59,7 @@ const page = () => {
   };
 
   const onEdit = (item) => {
-    router.push(`/dashboard`, {
+    router.push(`/dashboard/ajukan-bertemu/AddAjukanPage`, {
       state: {
         item,
       },
@@ -129,6 +131,13 @@ const page = () => {
   }, [sortColumn, sortOrder]);
 
   useEffect(() => {
+    if (addJanjiResult) {
+      fetchData();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [addJanjiResult]);
+
+  useEffect(() => {
     if (deleteJanjiResult) {
       fetchData();
     }
@@ -142,7 +151,7 @@ const page = () => {
         </h1>
         <button
           className="text-xs md:text-sm whitespace-nowrap font-medium px-4 py-2 bg-primary-base hover:bg-primary-baseHover active:bg-primary-baseActive text-white rounded-lg shadow hover:shadow-lg transition-all"
-          onClick={() => router.push("/dashboard")}
+          onClick={() => router.push("/dashboard/ajukan-bertemu/AddAjukanPage")}
         >
           Tambah Janji
         </button>
@@ -239,16 +248,16 @@ const page = () => {
                     {item.nomor_perusahaan}
                   </td>
                   <td className="p-2 text-center whitespace-normal">
-                    {item.web_perusahaan}
+                    {item.web_perusahaan ? <div>{item.web_perusahaan}</div> : <div>-</div>}
                   </td>
                   <td className="p-2 text-center whitespace-normal">
                     {item.meeting}
                   </td>
                   <td className="p-2 text-center whitespace-normal">
-                    {item.alamat_meeting}
+                    {item.alamat_meeting ? <div>{item.alamat_meeting}</div> : <div>-</div>}
                   </td>
                   <td className="p-2 text-center whitespace-normal">
-                    {item.rencana_tanggal}
+                    {moment(item.rencana_tanggal).format("DD-MM-YYYY")}
                   </td>
                   <td className="p-2 text-center whitespace-normal">
                     {item.url}

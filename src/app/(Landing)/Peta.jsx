@@ -2,12 +2,12 @@ import React from 'react'
 
 const Peta = () => {
   return (
-    <div className='relative overflow-hidden z-0 h-96 md:min-h-screen bg-[#1E293B] px-10 sm:px-28 transition-all duration-300 pt-[50px] xl:pb-20'>
-      <div className='text-white relative font-bold flex flex-col items-center text-center text-base sm:text-3xl xl:text-6xl mb-8'>
+    <div className='relative overflow-hidden z-0 h-96 md:min-h-screen bg-[#1E293B] px-10 sm:px-28 transition-all duration-300 pt-[50px]'>
+      <div className='text-white absolute font-bold flex flex-col items-center text-center text-base sm:text-3xl xl:text-6xl pointer-events-none xl:top-[220px] md:top-[150px] top-[100px] left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
         <div>
           11,658,467
         </div>
-        <div>
+        <div className='whitespace-nowrap'>
           ISP Telah Menggunakan ESPSkrip
         </div>
       </div>

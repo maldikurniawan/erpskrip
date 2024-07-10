@@ -24,24 +24,43 @@ const page = () => {
         email_perusahaan: '',
         nomor_perusahaan: '',
         web_perusahaan: '',
-        meeting: 'online',
+        meeting: '',
         alamat_meeting: '',
-        rencana_tanggal: '2024-07-27T10:57:00Z',
-        created_at: '2024-07-08T03:10:39.298863Z',
+        rencana_tanggal: '',
+        waktu_tanggal: '',
     })
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setInputData((prevData) => ({
+            ...prevData,
+            [name]: value,
+        }));
+    };
 
     function handleSubmit(event) {
         event.preventDefault()
-        axios.post('http://192.168.1.29:8000/api/detailpembuatjanji/', inputData)
-            .then(res => {
-                Swal.fire({
-                    position: "top-end",
-                    icon: "success",
-                    title: "Berhasil Membuat Janji!",
-                    showConfirmButton: false,
-                    timer: 1500
-                });
-            }).catch(err => console.log(err));
+        if (!inputData.waktu_tanggal || !inputData.rencana_tanggal || !inputData.meeting) {
+            Swal.fire({
+                position: "top-end",
+                icon: "error",
+                title: "Gagal Membuat Janji!",
+                text: "Terjadi kesalahan. Silakan coba lagi.",
+                showConfirmButton: false,
+                timer: 1500
+            });
+        } else {
+            axios.post('http://192.168.120.41:8000/api/detailpembuatjanji/', inputData)
+                .then(res => {
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "Berhasil Membuat Janji!",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }).catch(err => console.log(err));
+        }
     }
 
     return (
@@ -143,14 +162,18 @@ const page = () => {
                                 </div>
                                 <div className="flex mb-4">
                                     <div className="flex items-center me-4">
-                                        <input type="radio" value="" name="inline-radio-group" className="w-4 h-4 text-blue-600 bg-[#F5F5F7] border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" onClick={() => setShowInput(false)} />
+                                        <input type="radio" name='meeting' value="online" className="w-4 h-4 text-blue-600 bg-[#F5F5F7] border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" onClick={() => setShowInput(false)}
+                                            checked={inputData.meeting === 'online'}
+                                            onChange={handleChange} />
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6 ml-2">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" />
                                         </svg>
                                         <label htmlFor="inline-2-radio" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300 mr-4">Online</label>
                                     </div>
                                     <div className="flex items-center me-4">
-                                        <input type="radio" value="" name="inline-radio-group" className="w-4 h-4 text-blue-600 bg-[#F5F5F7] border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" onClick={() => setShowInput(true)} />
+                                        <input type="radio" name='meeting' value="offline" className="w-4 h-4 text-blue-600 bg-[#F5F5F7] border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" onClick={() => setShowInput(true)}
+                                            checked={inputData.meeting === 'offline'}
+                                            onChange={handleChange} />
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6 ml-2">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M12 18.75H4.5a2.25 2.25 0 0 1-2.25-2.25V9m12.841 9.091L16.5 19.5m-1.409-1.409c.407-.407.659-.97.659-1.591v-9a2.25 2.25 0 0 0-2.25-2.25h-9c-.621 0-1.184.252-1.591.659m12.182 12.182L2.909 5.909M1.5 4.5l1.409 1.409" />
                                         </svg>
@@ -262,6 +285,7 @@ const page = () => {
                                                             )}
                                                             onClick={() => {
                                                                 setSelectDate(date);
+                                                                setInputData({ ...inputData, rencana_tanggal: date.format("YYYY-MM-DD") });
                                                             }}
                                                         >
                                                             {date.date()}
@@ -272,43 +296,57 @@ const page = () => {
                                         )}
                                     </div>
                                 </div>
+                                <input
+                                    hidden
+                                    type="text"
+                                    value={selectDate ? selectDate.format("YYYY-MM-DD") : ""}
+                                    readOnly
+                                    className="border border-gray-300 rounded-md p-2 w-full mt-2"
+                                />
                                 <div className='font-bold text-xl mb-2 mt-4'>
                                     Waktu Meeting
                                 </div>
                                 <div className="grid w-full place-items-center">
                                     <div className="grid w-full grid-cols-4 xl:grid-cols-7 gap-2 rounded-xl p-2">
                                         <div>
-                                            <input type="radio" name="option" id="1" value="1" className="peer hidden" />
+                                            <input type="radio" name='waktu_tanggal' id='1' value="09:00:00" className="peer hidden" checked={inputData.waktu_tanggal === '09:00:00'}
+                                                onChange={handleChange} />
                                             <label htmlFor="1" className="block cursor-pointer bg-[#F5F5F7] select-none rounded-xl p-2 text-center peer-checked:bg-gray-900 peer-checked:font-bold peer-checked:text-white">09.00</label>
                                         </div>
 
                                         <div>
-                                            <input type="radio" name="option" id="2" value="2" className="peer hidden" />
+                                            <input type="radio" name='waktu_tanggal' id='2' value="10:00:00" className="peer hidden" checked={inputData.waktu_tanggal === '10:00:00'}
+                                                onChange={handleChange} />
                                             <label htmlFor="2" className="block cursor-pointer bg-[#F5F5F7] select-none rounded-xl p-2 text-center peer-checked:bg-gray-900 peer-checked:font-bold peer-checked:text-white">10.00</label>
                                         </div>
 
                                         <div>
-                                            <input type="radio" name="option" id="3" value="3" className="peer hidden" />
+                                            <input type="radio" name='waktu_tanggal' id='3' value="11:00:00" className="peer hidden" checked={inputData.waktu_tanggal === '11:00:00'}
+                                                onChange={handleChange} />
                                             <label htmlFor="3" className="block cursor-pointer bg-[#F5F5F7] select-none rounded-xl p-2 text-center peer-checked:bg-gray-900 peer-checked:font-bold peer-checked:text-white">11.00</label>
                                         </div>
 
                                         <div>
-                                            <input type="radio" name="option" id="4" value="4" className="peer hidden" />
+                                            <input type="radio" name='waktu_tanggal' id='4' value="14:00:00" className="peer hidden" checked={inputData.waktu_tanggal === '14:00:00'}
+                                                onChange={handleChange} />
                                             <label htmlFor="4" className="block cursor-pointer bg-[#F5F5F7] select-none rounded-xl p-2 text-center peer-checked:bg-gray-900 peer-checked:font-bold peer-checked:text-white">14.00</label>
                                         </div>
 
                                         <div>
-                                            <input type="radio" name="option" id="5" value="5" className="peer hidden" />
+                                            <input type="radio" name='waktu_tanggal' id='5' value="15:00:00" className="peer hidden" checked={inputData.waktu_tanggal === '15:00:00'}
+                                                onChange={handleChange} />
                                             <label htmlFor="5" className="block cursor-pointer bg-[#F5F5F7] select-none rounded-xl p-2 text-center peer-checked:bg-gray-900 peer-checked:font-bold peer-checked:text-white">15.00</label>
                                         </div>
 
                                         <div>
-                                            <input type="radio" name="option" id="6" value="6" className="peer hidden" />
+                                            <input type="radio" name='waktu_tanggal' id='6' value="16:00:00" className="peer hidden" checked={inputData.waktu_tanggal === '16:00:00'}
+                                                onChange={handleChange} />
                                             <label htmlFor="6" className="block cursor-pointer bg-[#F5F5F7] select-none rounded-xl p-2 text-center peer-checked:bg-gray-900 peer-checked:font-bold peer-checked:text-white">16.00</label>
                                         </div>
 
                                         <div>
-                                            <input type="radio" name="option" id="7" value="7" className="peer hidden" />
+                                            <input type="radio" name='waktu_tanggal' id='7' value="17:00:00" className="peer hidden" checked={inputData.waktu_tanggal === '17:00:00'}
+                                                onChange={handleChange} />
                                             <label htmlFor="7" className="block cursor-pointer bg-[#F5F5F7] select-none rounded-xl p-2 text-center peer-checked:bg-gray-900 peer-checked:font-bold peer-checked:text-white">17.00</label>
                                         </div>
                                     </div>

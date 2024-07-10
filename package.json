@@ -17,6 +17,7 @@
     "@svg-maps/indonesia": "^1.0.0",
     "axios": "^1.7.2",
     "dayjs": "^1.11.11",
+    "moment": "^2.30.1",
     "next": "14.2.4",
     "react": "^18",
     "react-calendar": "^5.0.0",
