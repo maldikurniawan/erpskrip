@@ -61,7 +61,7 @@ export default function UpdateAjukan(item: Item) {
         title: 'Success',
         text: 'The update was successful!',
       }).then(() => {
-        // window.location.reload();
+        window.location.reload();
       });
     } else {
       const errorData = await response.json();

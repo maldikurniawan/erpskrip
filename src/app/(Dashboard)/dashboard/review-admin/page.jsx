@@ -9,6 +9,7 @@ import { API_URL_review, API_URL_reviewupdate } from "../../../../constants/inde
 import { reviewReducers } from "../../../../redux/reducers/reviewSlice";
 import { BiSortDown, BiSortUp } from "react-icons/bi";
 import { useRouter } from "next/navigation";
+import UpdateReview from "./UpdateReview";
 
 const page = () => {
   const router = useRouter();
@@ -18,7 +19,6 @@ const page = () => {
     { title: "Nama", field: "name" },
     { title: "Jabatan", field: "jabatan" },
     { title: "Foto", field: "image" },
-    // { title: "Review", field: "content" },
   ];
   const {
     getReviewResult,
@@ -51,14 +51,6 @@ const page = () => {
       { dispatch, redux: reviewReducers },
       "DELETE_REVIEW"
     );
-  };
-
-  const onEdit = (item) => {
-    router.push(`/dashboard/review-admin/AddReviewPage`, {
-      state: {
-        item,
-      },
-    });
   };
 
   const onSearch = (value) => {
@@ -102,12 +94,6 @@ const page = () => {
   };
 
   const action = [
-    {
-      name: "edit",
-      icon: icons.fiedit,
-      color: "text-blue-500",
-      func: onEdit,
-    },
     {
       name: "hapus",
       icon: icons.rideletebin6line,
@@ -243,19 +229,19 @@ const page = () => {
                       className="w-8 h-8 rounded-full"
                     />
                   </td>
-                  {/* <td className="p-2 text-center whitespace-normal">
-                    {item.content}
-                  </td> */}
                   <td className="p-2 text-center whitespace-nowrap">
-                    {action.map((action, actionIdx) => (
-                      <button
-                        key={actionIdx}
-                        className={`mx-1 ${action.color}`}
-                        onClick={() => action.func(item)}
-                      >
-                        {action.icon}
-                      </button>
-                    ))}
+                    <div className="flex justify-end">
+                      <UpdateReview {...item} />
+                      {action.map((action, actionIdx) => (
+                        <button
+                          key={actionIdx}
+                          className={`mx-1 ${action.color}`}
+                          onClick={() => action.func(item)}
+                        >
+                          {action.icon}
+                        </button>
+                      ))}
+                    </div>
                   </td>
                 </tr>
               ))}

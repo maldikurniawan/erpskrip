@@ -167,7 +167,7 @@ const page = () => {
                 {tableHead.map((item, itemIdx) => (
                   <th
                     key={itemIdx}
-                    className="p-2 text-sm whitespace-normal"
+                    className="p-2 text-sm whitespace-nowrap"
                     onClick={() => {
                       item.field && handleSort(item.field);
                     }}
@@ -222,32 +222,32 @@ const page = () => {
                   key={itemIdx}
                   className="border-b border-gray-200 text-sm hover:bg-white/60 transition-all"
                 >
-                  <td className="p-2 text-center whitespace-normal">
+                  <td className="p-2 text-center whitespace-nowrap">
                     {itemIdx + offset + 1}
                   </td>
                   <td className="p-2 text-center">{item.perusahaan}</td>
                   {/* <td className="p-2 text-center whitespace-normal">
                     {item.alamat_perusahaan}
                   </td> */}
-                  <td className="p-2 text-center whitespace-normal">
+                  <td className="p-2 text-center whitespace-nowrap">
                     {item.email_perusahaan}
                   </td>
-                  <td className="p-2 text-center whitespace-normal">
+                  <td className="p-2 text-center whitespace-nowrap">
                     {item.nomor_perusahaan}
                   </td>
                   {/* <td className="p-2 text-center whitespace-normal">
                     {item.web_perusahaan ? <div>{item.web_perusahaan}</div> : <div>-</div>}
                   </td> */}
-                  <td className="p-2 text-center whitespace-normal">
+                  <td className="p-2 text-center whitespace-nowrap">
                     {item.meeting}
                   </td>
                   {/* <td className="p-2 text-center whitespace-normal">
                     {item.alamat_meeting ? <div>{item.alamat_meeting}</div> : <div>-</div>}
                   </td> */}
-                  <td className="p-2 text-center whitespace-normal">
+                  <td className="p-2 text-center whitespace-nowrap">
                     {moment(item.rencana_tanggal).format("DD-MM-YYYY")}
                   </td>
-                  <td className="p-2 text-center whitespace-normal">
+                  <td className="p-2 text-center whitespace-nowrap">
                     {item.waktu_tanggal}
                   </td>
                   <td className="p-2 text-center whitespace-nowrap flex">

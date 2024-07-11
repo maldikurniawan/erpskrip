@@ -53,7 +53,7 @@ const AddReviewPage = () => {
             placeholder: "Input Foto",
             value: "",
             image: "",
-            accept: "image/*",
+            ept: "imaccage/*",
         },
     ]);
     const [content, setContent] = useState();
