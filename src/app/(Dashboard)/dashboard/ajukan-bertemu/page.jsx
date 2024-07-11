@@ -10,6 +10,7 @@ import { janjiReducers } from "../../../../redux/reducers/janjiSlice";
 import { BiSortDown, BiSortUp } from "react-icons/bi";
 import { useRouter } from "next/navigation";
 import moment from 'moment';
+import UpdateAjukan from "./UpdateAjukan";
 
 const page = () => {
   const router = useRouter();
@@ -17,13 +18,14 @@ const page = () => {
   const tableHead = [
     { title: "No", field: "id" },
     { title: "Nama Perusahaan", field: "perusahaan" },
-    { title: "Alamat Perusahaan", field: "alamat_perusahaan" },
+    // { title: "Alamat Perusahaan", field: "alamat_perusahaan" },
     { title: "Email Perusahaan", field: "email_perusahaan" },
     { title: "No. Perusahaan", field: "nomor_perusahaan" },
-    { title: "Web Perusahaan", field: "web_perusahaan" },
+    // { title: "Web Perusahaan", field: "web_perusahaan" },
     { title: "Meeting", field: "meeting" },
-    { title: "Alamat Meeting", field: "alamat_meeting" },
-    { title: "Tanggal Meeting", field: "rencana_tanggal" },
+    // { title: "Alamat Meeting", field: "alamat_meeting" },
+    { title: "Tanggal", field: "rencana_tanggal" },
+    { title: "Waktu", field: "rencana_tanggal" },
   ];
   const {
     getJanjiResult,
@@ -56,14 +58,6 @@ const page = () => {
       { dispatch, redux: janjiReducers },
       "DELETE_JANJI"
     );
-  };
-
-  const onEdit = (item) => {
-    router.push(`/dashboard/ajukan-bertemu/AddAjukanPage`, {
-      state: {
-        item,
-      },
-    });
   };
 
   const onSearch = (value) => {
@@ -107,12 +101,6 @@ const page = () => {
   };
 
   const action = [
-    {
-      name: "edit",
-      icon: icons.fiedit,
-      color: "text-blue-500",
-      func: onEdit,
-    },
     {
       name: "hapus",
       icon: icons.rideletebin6line,
@@ -238,31 +226,32 @@ const page = () => {
                     {itemIdx + offset + 1}
                   </td>
                   <td className="p-2 text-center">{item.perusahaan}</td>
-                  <td className="p-2 text-center whitespace-normal">
+                  {/* <td className="p-2 text-center whitespace-normal">
                     {item.alamat_perusahaan}
-                  </td>
+                  </td> */}
                   <td className="p-2 text-center whitespace-normal">
                     {item.email_perusahaan}
                   </td>
                   <td className="p-2 text-center whitespace-normal">
                     {item.nomor_perusahaan}
                   </td>
-                  <td className="p-2 text-center whitespace-normal">
+                  {/* <td className="p-2 text-center whitespace-normal">
                     {item.web_perusahaan ? <div>{item.web_perusahaan}</div> : <div>-</div>}
-                  </td>
+                  </td> */}
                   <td className="p-2 text-center whitespace-normal">
                     {item.meeting}
                   </td>
-                  <td className="p-2 text-center whitespace-normal">
+                  {/* <td className="p-2 text-center whitespace-normal">
                     {item.alamat_meeting ? <div>{item.alamat_meeting}</div> : <div>-</div>}
-                  </td>
+                  </td> */}
                   <td className="p-2 text-center whitespace-normal">
                     {moment(item.rencana_tanggal).format("DD-MM-YYYY")}
                   </td>
                   <td className="p-2 text-center whitespace-normal">
-                    {item.url}
+                    {item.waktu_tanggal}
                   </td>
-                  <td className="p-2 text-center whitespace-nowrap">
+                  <td className="p-2 text-center whitespace-nowrap flex">
+                    <UpdateAjukan {...item} />
                     {action.map((action, actionIdx) => (
                       <button
                         key={actionIdx}
