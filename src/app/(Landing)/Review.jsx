@@ -90,7 +90,7 @@ const Review = () => {
               className="!flex items-center justify-center"
             >
               <div className="rounded-bl-2xl rounded-tr-2xl overflow-hidden max-w-sm text-sm bg-[#0F172A] text-white shadow-lg">
-                <div className="p-4 pb-14 md:text-xl text-lg">{item.description}</div>
+                <div className="p-4 pb-14 md:text-xl text-lg" dangerouslySetInnerHTML={{ __html: item.description }}></div>
                 <div className="h-20 w-full relative">
                   <div className="absolute left-4 -top-12 flex gap-4 items-end mt-4">
                     <div className="w-20 h-20">

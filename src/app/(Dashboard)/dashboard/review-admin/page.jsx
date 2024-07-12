@@ -10,6 +10,7 @@ import { reviewReducers } from "../../../../redux/reducers/reviewSlice";
 import { BiSortDown, BiSortUp } from "react-icons/bi";
 import { useRouter } from "next/navigation";
 import UpdateReview from "./UpdateReview";
+import nophoto from "../../../../../public/assets/nophoto.jpg"
 
 const page = () => {
   const router = useRouter();
@@ -224,7 +225,7 @@ const page = () => {
                   </td>
                   <td className="p-2 flex justify-center">
                     <img
-                      src={item.image}
+                      src={item.image ? item.image : "/assets/nophoto.jpg"}
                       alt="foto"
                       className="w-8 h-8 rounded-full"
                     />
