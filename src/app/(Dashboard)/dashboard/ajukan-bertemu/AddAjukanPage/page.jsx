@@ -6,35 +6,43 @@ import { CompInputs } from "../../../../../components/dashboard/index";
 import { postData, putData } from "../../../../../actions/index";
 import { API_URL_janji, API_URL_janjiupdate } from "../../../../../constants/index";
 import { janjiReducers } from "../../../../../redux/reducers/janjiSlice";
+import Swal from 'sweetalert2';
 
 const AddAjukanPage = () => {
     const router = useRouter();
     const dispatch = useDispatch();
 
+    const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+    });
+
     const [inputs, setInputs] = useState([
         {
-            label: "Nama Perusahaan",
+            label: "*Nama Perusahaan",
             name: "perusahaan",
             type: "text",
             placeholder: "Input Perusahaan",
             value: "",
         },
         {
-            label: "Alamat Perusahaan",
+            label: "*Alamat Perusahaan",
             name: "alamat_perusahaan",
             type: "text",
             placeholder: "Input Alamat Perusahaan",
             value: "",
         },
         {
-            label: "Email Perusahaan",
+            label: "*Email Perusahaan",
             name: "email_perusahaan",
             type: "text",
             placeholder: "Input Email",
             value: "",
         },
         {
-            label: "Nomor Perusahaan",
+            label: "*Nomor Perusahaan",
             name: "nomor_perusahaan",
             type: "text",
             placeholder: "Input Nomor",
@@ -48,7 +56,7 @@ const AddAjukanPage = () => {
             value: "",
         },
         {
-            label: "Meeting",
+            label: "*Meeting",
             name: "meeting",
             type: "select",
             placeholder: "Input Status Meeting",
@@ -72,14 +80,14 @@ const AddAjukanPage = () => {
             value: "",
         },
         {
-            label: "Rencana Tanggal",
+            label: "*Rencana Tanggal",
             name: "rencana_tanggal",
             type: "date",
             placeholder: "Input Tanggal",
             value: "",
         },
         {
-            label: "Waktu Tanggal",
+            label: "*Waktu Tanggal",
             name: "waktu_tanggal",
             type: "select",
             placeholder: "Input Waktu",
@@ -124,6 +132,19 @@ const AddAjukanPage = () => {
     };
 
     const onSubmit = () => {
+        if (!inputs[0].value.trim() ||
+            !inputs[1].value.trim() ||
+            !inputs[2].value.trim() ||
+            !inputs[3].value.trim() ||
+            !inputs[5].value.trim() ||
+            !inputs[7].value.trim() ||
+            !inputs[8].value.trim()) {
+            Toast.fire({
+                icon: "error",
+                title: "Please fill in all required fields."
+            });
+            return;
+        }
         const formData = new FormData();
 
         formData.append("perusahaan", inputs[0].value);

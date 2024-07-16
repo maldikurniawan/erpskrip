@@ -7,10 +7,17 @@ import { postData, putData } from "../../../../../actions/index";
 import { API_URL_review, API_URL_reviewupdate } from "../../../../../constants/index";
 import { reviewReducers } from "../../../../../redux/reducers/reviewSlice";
 import { Editor } from "@tinymce/tinymce-react";
+import Swal from 'sweetalert2';
 
 const AddReviewPage = () => {
     const router = useRouter();
     const dispatch = useDispatch();
+    const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+    });
     const editorRef = useRef(null);
     const initEditor = {
         plugins:
@@ -33,14 +40,14 @@ const AddReviewPage = () => {
 
     const [inputs, setInputs] = useState([
         {
-            label: "Nama",
+            label: "*Nama",
             name: "name",
             type: "text",
             placeholder: "Input Nama",
             value: "",
         },
         {
-            label: "Jabatan",
+            label: "*Jabatan",
             name: "jabatan",
             type: "text",
             placeholder: "Input Jabatan",
@@ -75,6 +82,14 @@ const AddReviewPage = () => {
     };
 
     const onSubmit = () => {
+        if (!inputs[0].value.trim() ||
+            !inputs[1].value.trim()) {
+            Toast.fire({
+                icon: "error",
+                title: "Please fill in all required fields."
+            });
+            return;
+        }
         const formData = new FormData();
 
         formData.append("name", inputs[0].value);

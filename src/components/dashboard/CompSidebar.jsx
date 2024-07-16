@@ -45,14 +45,14 @@ const CompSidebar = ({ sideOpen, setSideOpen }) => {
     <Fragment>
       <div
         onClick={() => setSideOpen(!sideOpen)}
-        className={`fixed w-screen h-screen sm:hidden ${sideOpen ? "" : "hidden"
+        className={`fixed w-screen h-screen xl:hidden ${sideOpen ? "" : "hidden"
           }`}
       ></div>
 
       {/* Sidebar */}
       <div
-        className={`${sideOpen ? "w-48 sm:w-60 left-0" : "w-14 -left-96 sm:left-0 sm:block"
-          } z-10 fixed sm:relative h-screen flex flex-col bg-[#0F172A] shadow-lg shadow-slate-400 sm:shadow-none text-white transition-all rounded-r-3xl sm:rounded-none`}
+        className={`${sideOpen ? "w-48 xl:w-60 left-0" : "w-14 -left-96 xl:left-0 xl:block"
+          } z-10 fixed xl:relative h-screen flex flex-col bg-[#0F172A] shadow-lg shadow-slate-400 xl:shadow-none text-white transition-all rounded-r-3xl xl:rounded-none`}
       >
         {/* Logo */}
         <div className="w-full flex justify-center my-4">
@@ -64,7 +64,7 @@ const CompSidebar = ({ sideOpen, setSideOpen }) => {
         </div>
 
         {/* Menu */}
-        <div className="px-2 pb-5 text-sm overflow-y-auto max-h-[80vh] hidden-scroll">
+        <div className="px-2 pb-5 text-xl overflow-y-auto max-h-[80vh] hidden-scroll">
           {menuItem.map((item, itemIdx) => (
             <Link
               key={itemIdx}
