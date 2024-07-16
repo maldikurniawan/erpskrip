@@ -116,7 +116,7 @@ const page = () => {
 
   useEffect(() => {
     fetchData();
-  }, [sortColumn, sortOrder]);
+  }, [fetchData]);
 
   useEffect(() => {
     if (addJanjiResult) {
@@ -251,7 +251,7 @@ const page = () => {
                     {item.waktu_tanggal}
                   </td>
                   <td className="p-2 text-center whitespace-nowrap flex">
-                    <UpdateAjukan {...item} />
+                    <UpdateAjukan {...item} fetchData={fetchData} />
                     {action.map((action, actionIdx) => (
                       <button
                         key={actionIdx}

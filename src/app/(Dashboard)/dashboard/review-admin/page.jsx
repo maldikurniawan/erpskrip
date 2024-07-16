@@ -110,7 +110,7 @@ const page = () => {
 
   useEffect(() => {
     fetchData();
-  }, [sortColumn, sortOrder]);
+  }, [fetchData]);
 
   useEffect(() => {
     if (addReviewResult) {
@@ -232,7 +232,7 @@ const page = () => {
                   </td>
                   <td className="p-2 text-center whitespace-nowrap">
                     <div className="flex justify-end">
-                      <UpdateReview {...item} />
+                      <UpdateReview {...item} fetchData={fetchData} />
                       {action.map((action, actionIdx) => (
                         <button
                           key={actionIdx}

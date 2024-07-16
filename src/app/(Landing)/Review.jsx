@@ -1,59 +1,28 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
 
 const Review = () => {
-  const [review] = useState([
-    {
-      user: "Jhone Doe",
-      position: "CEO PT Lorem",
-      image: "/assets/people-1.png",
-      description:
-        "ERPSkrip itu aplikasi manajemen bisnis yang user-friendly dan lengkap. Fitur-fiturnya. Integrasinya oke, Support-nya cepat tanggap dan harganya kompetitif. Cocok buat bisnis kecil hingga menengah.",
-    },
-    {
-      user: "Jenny Doe",
-      position: "CEO PT Lorem Ipsum",
-      image: "/assets/people-2.png",
-      description:
-        "ERPSkrip itu aplikasi manajemen bisnis yang user-friendly dan lengkap. Fitur-fiturnya. Integrasinya oke, Support-nya cepat tanggap dan harganya kompetitif. Cocok buat bisnis kecil hingga menengah.",
-    },
-    {
-      user: "Suzana Aymcryzyovru",
-      position: "Ceo PT цыка блять",
-      image: "/assets/people-3.png",
-      description:
-        "ERPSkrip itu aplikasi manajemen bisnis yang user-friendly dan lengkap. Fitur-fiturnya. Integrasinya oke, Support-nya cepat tanggap dan harganya kompetitif. Cocok buat bisnis kecil hingga menengah.",
-    },
-    {
-      user: "Jhone Doe",
-      position: "CEO PT Lorem",
-      image: "/assets/people-1.png",
-      description:
-        "ERPSkrip itu aplikasi manajemen bisnis yang user-friendly dan lengkap. Fitur-fiturnya. Integrasinya oke, Support-nya cepat tanggap dan harganya kompetitif. Cocok buat bisnis kecil hingga menengah.",
-    },
-    {
-      user: "Jenny Doe",
-      position: "CEO PT Lorem Ipsum",
-      image: "/assets/people-2.png",
-      description:
-        "ERPSkrip itu aplikasi manajemen bisnis yang user-friendly dan lengkap. Fitur-fiturnya. Integrasinya oke, Support-nya cepat tanggap dan harganya kompetitif. Cocok buat bisnis kecil hingga menengah.",
-    },
-    {
-      user: "Suzana Aymcryzyovru",
-      position: "Ceo PT цыка блять",
-      image: "/assets/people-3.png",
-      description:
-        "ERPSkrip itu aplikasi manajemen bisnis yang user-friendly dan lengkap. Fitur-fiturnya. Integrasinya oke, Support-nya cepat tanggap dan harganya kompetitif. Cocok buat bisnis kecil hingga menengah.",
-    },
-  ]);
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch('http://192.168.120.41:8000/api/review/');
+      const result = await res.json();
+      setData(result);
+      setLoading(false);
+    };
+
+    fetchData();
+  }, []);
   return (
     <div className="relative overflow-hidden min-h-screen bg-[#F7F7F7] px-10 md:px-28 transition-all duration-300 pt-[100px] pb-20">
       <div className="mb-12 text-center md:text-left">
         <div className="text-3xl md:text-6xl text-black font-bold mb-1 text-center">
-          Semua ISP Mencintai <span className="text-[#0F172A]">ERPSkrip</span> 
+          Semua ISP Mencintai <span className="text-[#0F172A]">ERPSkrip</span>
         </div>
         <div className="text-[#A1A1A1] text-base md:text-lg text-center">
           Pandangan Kritis tentang Pengalaman Pengguna dengan Sistem ERP
@@ -84,37 +53,28 @@ const Review = () => {
           spaceBetween={10}
           className="!py-10"
         >
-          {review.map((item, itemIdx) => (
+          {data.map((item, itemIdx) => (
             <SwiperSlide
               key={itemIdx}
               className="!flex items-center justify-center"
             >
               <div className="rounded-bl-2xl rounded-tr-2xl overflow-hidden max-w-sm text-sm bg-[#0F172A] text-white shadow-lg">
-                <div className="p-4 pb-14 md:text-xl text-lg" dangerouslySetInnerHTML={{ __html: item.description }}></div>
+                <div className="p-4 pb-14 md:text-xl text-lg" dangerouslySetInnerHTML={{ __html: item.content }}></div>
                 <div className="h-20 w-full relative">
                   <div className="absolute left-4 -top-12 flex gap-4 items-end mt-4">
                     <div className="w-20 h-20">
                       <img
-                        src={item.image}
+                        src={item.image ? item.image : "/assets/nophoto.jpg"}
                         alt="people"
-                        className="h-full w-full object-cover"
+                        className="w-20 h-20 rounded-full object-cover"
                       />
                     </div>
                     <div>
-                      <div className="font-bold italic">{item.user}</div>
+                      <div className="font-bold italic">{item.name}</div>
                       <div className="h-12 pt-1">
                         <div className="text-[#A1A1A1] italic">
-                          {item.position}
+                          {item.jabatan}
                         </div>
-                        {/* <div className="flex items-center gap-1">
-                          {[...Array(item.star)].map((_, starIdx) => (
-                            <img
-                              src="/assets/star.png"
-                              alt="star"
-                              key={starIdx}
-                            />
-                          ))}
-                        </div> */}
                       </div>
                     </div>
                   </div>
@@ -125,26 +85,26 @@ const Review = () => {
         </Swiper>
       </div>
       <div className="absolute hidden md:block z-0 bottom-0 right-10">
-				<img
-					src="/assets/kotak.png"
-					alt="wave"
-					className="h-40 w-40"
-				/>
-			</div>
+        <img
+          src="/assets/kotak.png"
+          alt="wave"
+          className="h-40 w-40"
+        />
+      </div>
       <div className="absolute hidden md:block z-0 top-0 left-10">
-				<img
-					src="/assets/kotak.png"
-					alt="wave"
-					className="h-40 w-40"
-				/>
-			</div>
+        <img
+          src="/assets/kotak.png"
+          alt="wave"
+          className="h-40 w-40"
+        />
+      </div>
       <div className="absolute z-0 -bottom-40 left-32">
-				<img
-					src="/assets/kotak-biru.png"
-					alt="wave"
-					className="h-72 w-72"
-				/>
-			</div>
+        <img
+          src="/assets/kotak-biru.png"
+          alt="wave"
+          className="h-72 w-72"
+        />
+      </div>
     </div>
   );
 }

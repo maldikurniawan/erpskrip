@@ -16,6 +16,7 @@ type Item = {
   alamat_meeting: string;
   rencana_tanggal: string;
   waktu_tanggal: string;
+  fetchData: () => void;
 };
 
 export default function UpdateAjukan(item: Item) {
@@ -61,7 +62,7 @@ export default function UpdateAjukan(item: Item) {
         title: 'Success',
         text: 'The update was successful!',
       }).then(() => {
-        window.location.reload();
+        item.fetchData();
       });
     } else {
       const errorData = await response.json();

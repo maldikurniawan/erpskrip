@@ -11,6 +11,7 @@ type Item = {
     jabatan: string;
     content: string;
     image: string;
+    fetchData: () => void;
 };
 
 export default function UpdateReview(item: Item) {
@@ -46,7 +47,7 @@ export default function UpdateReview(item: Item) {
                 title: 'Success',
                 text: 'The update was successful!',
             }).then(() => {
-                window.location.reload();
+                item.fetchData(); // Reload table data
             });
         } else {
             const errorData = await response.json();
@@ -85,7 +86,7 @@ export default function UpdateReview(item: Item) {
                     <h3 className="font-bold text-lg">Edit Review</h3>
                     <form onSubmit={handleUpdate}>
                         <div className="form-control">
-                            <label className="label font-bold">Perusahaan</label>
+                            <label className="label font-bold">Name</label>
                             <input
                                 type="text"
                                 value={name}
