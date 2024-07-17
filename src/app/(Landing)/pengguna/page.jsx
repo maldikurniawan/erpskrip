@@ -3,7 +3,7 @@
 import Header from '@/components/layouts/Header'
 import React, { useState } from 'react'
 
-const page = () => {
+const Pengguna = () => {
 
     const [pengguna] = useState([
         {
@@ -67,4 +67,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Pengguna

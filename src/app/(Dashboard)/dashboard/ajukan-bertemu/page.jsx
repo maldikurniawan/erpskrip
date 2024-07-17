@@ -12,7 +12,7 @@ import { useRouter } from "next/navigation";
 import moment from 'moment';
 import UpdateAjukan from "./UpdateAjukan";
 
-const page = () => {
+const AjukanPage = () => {
   const router = useRouter();
   const dispatch = useDispatch();
   const tableHead = [
@@ -278,4 +278,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default AjukanPage;

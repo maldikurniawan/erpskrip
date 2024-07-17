@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation';
 import Swal from "sweetalert2";
 import axios from "axios";
 
-const page = () => {
+const Login = () => {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -135,4 +135,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Login

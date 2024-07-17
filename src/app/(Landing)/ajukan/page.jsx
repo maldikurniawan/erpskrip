@@ -14,7 +14,7 @@ import InputComponent from '@/components/atoms/InputComponent';
 import * as Yup from 'yup';
 import moment from 'moment';
 
-const page = () => {
+const Ajukan = () => {
     const days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
     const days2 = ["M", "S", "S", "R", "K", "J", "S"];
     const currentDate = dayjs();
@@ -471,4 +471,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Ajukan

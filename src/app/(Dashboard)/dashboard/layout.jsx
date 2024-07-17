@@ -4,7 +4,7 @@ import CompSidebar from "../../../components/dashboard/CompSidebar";
 import CompHeader from "../../../components/dashboard/CompHeader";
 import { useRouter } from 'next/navigation';
 
-const layout = ({ children }) => {
+const Layout = ({ children }) => {
     const [sideOpen, setSideOpen] = useState(true);
     const router = useRouter();
 
@@ -34,4 +34,4 @@ const layout = ({ children }) => {
     )
 }
 
-export default layout
+export default Layout

@@ -12,7 +12,7 @@ import { useRouter } from "next/navigation";
 import UpdateReview from "./UpdateReview";
 import nophoto from "../../../../../public/assets/nophoto.jpg"
 
-const page = () => {
+const Review = () => {
   const router = useRouter();
   const dispatch = useDispatch();
   const tableHead = [
@@ -260,4 +260,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Review;

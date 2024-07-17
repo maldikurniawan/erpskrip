@@ -4,7 +4,7 @@ import Header from '@/components/layouts/Header'
 import React, { useState } from 'react'
 import { TbMinus, TbPlus } from 'react-icons/tb';
 
-const page = () => {
+const Faq = () => {
 
   const [faq, setFaq] = useState([
     {
@@ -81,4 +81,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Faq
